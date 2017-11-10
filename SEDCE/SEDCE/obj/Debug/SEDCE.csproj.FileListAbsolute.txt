@@ -1,0 +1,4 @@
+c:\users\jonathan rodriguez\documents\visual studio 2012\Projects\SEDCE\SEDCE\bin\SEDCE.dll
+c:\users\jonathan rodriguez\documents\visual studio 2012\Projects\SEDCE\SEDCE\bin\SEDCE.pdb
+c:\users\jonathan rodriguez\documents\visual studio 2012\Projects\SEDCE\SEDCE\obj\Debug\SEDCE.dll
+c:\users\jonathan rodriguez\documents\visual studio 2012\Projects\SEDCE\SEDCE\obj\Debug\SEDCE.pdb
