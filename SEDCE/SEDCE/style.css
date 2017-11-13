@@ -171,3 +171,10 @@ padding : 10px;
 border : 1px solid #aaa;
 margin-left : 10px;
 }
+
+@font-face {
+    font-family: 'Soberana Titular';
+    src:url(Fuentes/SoberanaTitular-Regular.otf);
+    font-style:normal;
+    font-weight:normal;
+}
