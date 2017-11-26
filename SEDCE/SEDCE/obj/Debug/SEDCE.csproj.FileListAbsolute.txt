@@ -7,3 +7,10 @@ C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\bin\SEDCE.pdb
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csprojResolveAssemblyReference.cache
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.dll
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.pdb
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\SEDCE.dll.config
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\SEDCE.dll
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\SEDCE.pdb
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csproj.CoreCompileInputs.cache
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.dll
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.pdb
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csprojResolveAssemblyReference.cache
