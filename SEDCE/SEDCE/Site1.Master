@@ -18,6 +18,7 @@
     <li><a href="SeguroSocial.aspx">Seguro Social</a></li>
     <li><a href="Login.aspx">Inicio de sesion</a></li>
     <li><a href="Info.aspx">Carga de archivos</a></li>
+    <li><a href="Configuraciones.aspx">Configuracion de cuentas</a></li>
   </ul>
 </div>
 <div id="gutter"></div>

@@ -57,6 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Configuraciones.aspx" />
     <Content Include="Graficas.aspx" />
     <Content Include="img\banner.jpg" />
     <Content Include="img\box.jpg" />
@@ -75,6 +76,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuraciones.aspx.cs">
+      <DependentUpon>Configuraciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuraciones.aspx.designer.cs">
+      <DependentUpon>Configuraciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Graficas.aspx.cs">
       <DependentUpon>Graficas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
