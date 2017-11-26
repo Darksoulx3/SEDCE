@@ -15,7 +15,7 @@
                 <asp:TextBox ID="txtxBPassword" runat="server" Width="200px" TextMode="Password"></asp:TextBox>
             </div>
             <div style="margin-top:30px">
-                <asp:Button ID="btnInicioSesion" runat="server" Text="Iniciar sesión" />
+                <asp:Button ID="btnInicioSesion" runat="server" Text="Iniciar sesión" OnClick="btnInicioSesion_Click" />
             </div>
         </form>
     </div>
