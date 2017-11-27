@@ -14,3 +14,8 @@ C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csproj.CoreCompile
 C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.dll
 C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.pdb
 C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csprojResolveAssemblyReference.cache
+C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\bin\SEDCE.dll
+C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\bin\SEDCE.pdb
+C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csprojResolveAssemblyReference.cache
+C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.dll
+C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.pdb

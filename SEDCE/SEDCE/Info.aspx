@@ -5,7 +5,7 @@
         <asp:Label ID="Titulo" runat="server" Text="Cargador de archivos" Font-Underline="true" Font-Size="X-Large"></asp:Label>
     </div>
     <div style="margin-left:auto; margin-right:auto; text-align:center; margin-top:60px">
-        <form id="frm" runat="server" style="margin-top:30px">
+        <div style="margin-top:30px">
             <div>
                 <asp:Label ID="lblSubirArchivo" runat="server" Text="Seleccione un archivo para cargar la base de datos: "></asp:Label>
                 <asp:TextBox ID="txtBSubirArchivo" runat="server" Width="200px"></asp:TextBox>
@@ -22,6 +22,6 @@
             <div style="margin-top:30px">
                 <asp:Button ID="Button2" runat="server" Text="Subir datos" />
             </div>
-        </form>
+        </div>
     </div>
 </asp:Content>

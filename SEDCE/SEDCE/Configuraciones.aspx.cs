@@ -13,7 +13,10 @@ namespace SEDCE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["USUARIO"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
 
         protected void btnAlta_Click(object sender, EventArgs e)

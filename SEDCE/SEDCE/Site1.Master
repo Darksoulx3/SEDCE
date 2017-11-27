@@ -1,17 +1,21 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="SEDCE.Site1" %>
 
+<%@ Register Src="~/Menu.ascx" TagPrefix="uc1" TagName="Menu" %>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<head runat="server">
 <title></title>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="header">
-</div>
-<div id="topnav">
-  <ul id="topnavlist">
+    <form runat="server">
+        <div id="header">
+        </div>
+        <div id="topnav">
+            <%--<ul id="topnavlist">
     <li><a href="Inicio.aspx">Inicio</a></li>
     <li><a href="Graficas.aspx">Graficas</a></li>
     <li><a href="Reportes.aspx">Reportes</a></li>
@@ -19,22 +23,27 @@
     <li><a href="Login.aspx">Inicio de sesion</a></li>
     <li><a href="Info.aspx">Carga de archivos</a></li>
     <li><a href="Configuraciones.aspx">Configuracion de cuentas</a></li>
-  </ul>
-</div>
-<div id="gutter"></div>
-<div id="col1">
-  
-</div>
-<div id="col2">
-  <asp:ContentPlaceHolder ID="ContentCol2" runat="server">
-
-    </asp:ContentPlaceHolder>
-</div>
-<div id="col3">
-    
-</div>
-<%--<div id="footer" style="margin-bottom:0"> <a href="#">homepage</a> | <a href="mailto:denise@mitchinson.net">contact</a> | <a href="http://validator.w3.org/check?uri=referer">html</a> | <a href="http://jigsaw.w3.org/css-validator">css</a> | &copy; 2007 Anyone | Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a><br/>
+  </ul>--%>
+            <table style="margin: 0 auto 0 auto">
+            <tr>
+                <td>
+                    <uc1:Menu runat="server" ID="Menu" />
+                </td>
+            </tr>
+        </table>
+        </div>
+        <div id="gutter"></div>
+        <div id="col1">
+        </div>
+        <div id="col2">
+            <asp:ContentPlaceHolder ID="ContentCol2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="col3">
+        </div>
+        <%--<div id="footer" style="margin-bottom:0"> <a href="#">homepage</a> | <a href="mailto:denise@mitchinson.net">contact</a> | <a href="http://validator.w3.org/check?uri=referer">html</a> | <a href="http://jigsaw.w3.org/css-validator">css</a> | &copy; 2007 Anyone | Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a><br/>
   This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a> 
 </div>--%>
+    </form>
 </body>
 </html>

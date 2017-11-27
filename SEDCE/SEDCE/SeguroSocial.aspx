@@ -5,7 +5,7 @@
         <asp:Label ID="Titulo" runat="server" Text="Seguro Social" Font-Underline="true" Font-Size="X-Large"></asp:Label>
     </div>
     <div style="margin-left:auto; margin-right:auto; text-align:center; margin-top:60px">
-        <form id="frm" runat="server" style="margin-top:30px">
+        <div style="margin-top:30px">
             <div>
                 <asp:Label ID="lblTipodeBusqueda" runat="server" Text="Seleccione el tipo de busqueda: "></asp:Label>
                 <asp:DropDownList ID="ddlBusqueda" runat="server" Width="100px"></asp:DropDownList>
@@ -23,6 +23,6 @@
                 <asp:Button ID="btnAgregar" runat="server" Text="Agregar NSS" />
                 <asp:Button ID="btnModificar" runat="server" Text="Modificar NSS" />
             </div>
-        </form>
+        </div>
     </div>
 </asp:Content>

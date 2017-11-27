@@ -4,7 +4,6 @@
         <asp:Label ID="Titulo" runat="server" Text="Configuración de cuentas" Font-Underline="true" Font-Size="X-Large"></asp:Label>
     </div>
     <div style="margin-left:auto; margin-right:auto; text-align:center;">
-        <form runat="server">
             <br />
         <br />
         <br />
@@ -48,7 +47,6 @@
             <br />
             <br />
             <asp:Button ID="btnAceptarCambioUsuario" Text="Aceptar" runat="server" />
-        </div>
-        </form>      
+        </div>     
     </div>
 </asp:Content>
