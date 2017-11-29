@@ -10,7 +10,7 @@
         <div style="margin-top:30px">
             <div style="margin-right:48px">
                 <asp:Label ID="lblTipodeReporte" runat="server" Text="Tipo de reporte: " ></asp:Label>
-                <asp:DropDownList ID="ddlTipoReporte" runat="server" Width="200px" OnSelectedIndexChanged="ddlTipoReporte_SelectedIndexChanged">
+                <asp:DropDownList ID="ddlTipoReporte" runat="server" Width="200px" >
                     <asp:ListItem>ALUMNOS DE NUEVO INGRESO LICENCIATURA.</asp:ListItem>
                     <asp:ListItem>EGRESADOS DE LICENCIATURA.</asp:ListItem>
                     <asp:ListItem>MATRICULA TOTAL DE LICENCIATURA.</asp:ListItem>
@@ -18,7 +18,7 @@
             </div>
             <div style="margin-top:30px">
                 <asp:Label ID="lblCarrera" runat="server" Text="Carrera: "></asp:Label>
-                <asp:DropDownList ID="ddlCarrera" runat="server" Width="200px" OnSelectedIndexChanged="ddlCarrera_SelectedIndexChanged">
+                <asp:DropDownList ID="ddlCarrera" runat="server" Width="200px">
                     <asp:ListItem>TODAS</asp:ListItem>
                     <asp:ListItem>ING. BIOMEDICA</asp:ListItem>
                     <asp:ListItem>ING. EN INFORMATICA</asp:ListItem>
@@ -40,14 +40,16 @@
             </div>
             <div style="margin-right:0px; margin-top:30px">
                 <asp:Label ID="lblPeriodo" runat="server" Text="Periodo: " ></asp:Label>
-                <asp:DropDownList ID="ddlPeriodo" runat="server" Width="200px" OnSelectedIndexChanged="ddlTipoReporte_SelectedIndexChanged">
+                <asp:DropDownList ID="ddlPeriodo" runat="server" Width="200px">
                     <asp:ListItem>2017-1</asp:ListItem>
                 </asp:DropDownList>
             </div>
             <div style="margin-right:2px;margin-top:30px">
                 <asp:Label ID="lblFormato" runat="server" Text="Formato: " ></asp:Label>
-                <asp:DropDownList ID="ddlFormato" runat="server" Width="200px" OnSelectedIndexChanged="ddlFormato_SelectedIndexChanged">
+                <asp:DropDownList ID="ddlFormato" runat="server" Width="200px">
                     <asp:ListItem>PDF</asp:ListItem>
+                    <asp:ListItem>WORD</asp:ListItem>
+                    <asp:ListItem>EXCEL</asp:ListItem>
                 </asp:DropDownList>
             </div>
             <div style="margin-top:30px">
