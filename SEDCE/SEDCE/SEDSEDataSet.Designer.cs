@@ -2820,6 +2820,8 @@ namespace SEDCE {
             
             private global::System.Data.DataColumn columnPromedio;
             
+            private global::System.Data.DataColumn columnCantidad;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public MATRICULA_COMPLETADataTable() {
@@ -2927,6 +2929,14 @@ namespace SEDCE {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CantidadColumn {
+                get {
+                    return this.columnCantidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2962,7 +2972,7 @@ namespace SEDCE {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MATRICULA_COMPLETARow AddMATRICULA_COMPLETARow(string Genero, double Edad, string Carrera, double Semestre, string Competencia, int Extanjero, string Lengua_Indigena, string Discapacidad, double Promedio) {
+            public MATRICULA_COMPLETARow AddMATRICULA_COMPLETARow(string Genero, double Edad, string Carrera, double Semestre, string Competencia, int Extanjero, string Lengua_Indigena, string Discapacidad, double Promedio, int Cantidad) {
                 MATRICULA_COMPLETARow rowMATRICULA_COMPLETARow = ((MATRICULA_COMPLETARow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Genero,
@@ -2973,7 +2983,8 @@ namespace SEDCE {
                         Extanjero,
                         Lengua_Indigena,
                         Discapacidad,
-                        Promedio};
+                        Promedio,
+                        Cantidad};
                 rowMATRICULA_COMPLETARow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMATRICULA_COMPLETARow);
                 return rowMATRICULA_COMPLETARow;
@@ -3005,6 +3016,7 @@ namespace SEDCE {
                 this.columnLengua_Indigena = base.Columns["Lengua_Indigena"];
                 this.columnDiscapacidad = base.Columns["Discapacidad"];
                 this.columnPromedio = base.Columns["Promedio"];
+                this.columnCantidad = base.Columns["Cantidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3028,12 +3040,15 @@ namespace SEDCE {
                 base.Columns.Add(this.columnDiscapacidad);
                 this.columnPromedio = new global::System.Data.DataColumn("Promedio", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPromedio);
+                this.columnCantidad = new global::System.Data.DataColumn("Cantidad", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCantidad);
                 this.columnGenero.MaxLength = 255;
                 this.columnCarrera.MaxLength = 255;
                 this.columnCompetencia.MaxLength = 255;
                 this.columnExtanjero.ReadOnly = true;
                 this.columnLengua_Indigena.MaxLength = 255;
                 this.columnDiscapacidad.MaxLength = 255;
+                this.columnCantidad.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4465,6 +4480,22 @@ namespace SEDCE {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int Cantidad {
+                get {
+                    try {
+                        return ((int)(this[this.tableMATRICULA_COMPLETA.CantidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cantidad\' in table \'MATRICULA_COMPLETA\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMATRICULA_COMPLETA.CantidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsGeneroNull() {
                 return this.IsNull(this.tableMATRICULA_COMPLETA.GeneroColumn);
             }
@@ -4569,6 +4600,18 @@ namespace SEDCE {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetPromedioNull() {
                 this[this.tableMATRICULA_COMPLETA.PromedioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCantidadNull() {
+                return this.IsNull(this.tableMATRICULA_COMPLETA.CantidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCantidadNull() {
+                this[this.tableMATRICULA_COMPLETA.CantidadColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -7291,6 +7334,7 @@ namespace SEDCE.SEDSEDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Lengua_Indigena", "Lengua_Indigena");
             tableMapping.ColumnMappings.Add("Discapacidad", "Discapacidad");
             tableMapping.ColumnMappings.Add("Promedio", "Promedio");
+            tableMapping.ColumnMappings.Add("Cantidad", "Cantidad");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

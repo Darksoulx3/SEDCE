@@ -22,6 +22,24 @@ namespace SEDCE {
         protected global::System.Web.UI.WebControls.Label Titulo;
         
         /// <summary>
+        /// lblTipodeReporte control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTipodeReporte;
+        
+        /// <summary>
+        /// ddlTipoReporte control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoReporte;
+        
+        /// <summary>
         /// lblCarrera control.
         /// </summary>
         /// <remarks>
@@ -49,24 +67,6 @@ namespace SEDCE {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource;
         
         /// <summary>
-        /// lblTipodeReporte control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTipodeReporte;
-        
-        /// <summary>
-        /// ddlTipoReporte control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTipoReporte;
-        
-        /// <summary>
         /// lblPeriodo control.
         /// </summary>
         /// <remarks>
@@ -76,13 +76,13 @@ namespace SEDCE {
         protected global::System.Web.UI.WebControls.Label lblPeriodo;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// ddlPeriodo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPeriodo;
         
         /// <summary>
         /// lblFormato control.

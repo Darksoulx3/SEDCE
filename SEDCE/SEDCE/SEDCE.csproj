@@ -74,6 +74,7 @@
       <BrowseToURL>~/Login.aspx</BrowseToURL>
     </Content>
     <Content Include="Menu.ascx" />
+    <Content Include="Reporteador.aspx" />
     <Content Include="Reportes.aspx" />
     <Content Include="SeguroSocial.aspx" />
     <Content Include="style.css" />
@@ -123,6 +124,13 @@
       <DependentUpon>Menu.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporteador.aspx.cs">
+      <DependentUpon>Reporteador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporteador.aspx.designer.cs">
+      <DependentUpon>Reporteador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reportes.aspx.cs">
       <DependentUpon>Reportes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

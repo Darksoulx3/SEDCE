@@ -1,6 +1,7 @@
 ﻿using Microsoft.Reporting.WebForms;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -19,29 +20,23 @@ namespace SEDCE
         }
 
         protected void btnReporte_Click(object sender, EventArgs e)
-        {
-            ReportViewer Reporteador = new ReportViewer();
-            if (ddlTipoReporte.SelectedIndex == 2)
+        {   
+            //Response.Redirect("Reporteador.aspx");
+
+            LocalReport report = new LocalReport();
+            report.ReportPath = "Reportes/MatriculaCompleta.rdlc";
+            SEDSEDataSetTableAdapters.MATRICULA_COMPLETATableAdapter ta = new SEDSEDataSetTableAdapters.MATRICULA_COMPLETATableAdapter();
+            SEDSEDataSet.MATRICULA_COMPLETADataTable dt = new SEDSEDataSet.MATRICULA_COMPLETADataTable();
+            ta.Fill(dt);
+            ReportDataSource rds = new ReportDataSource();
+            rds.Name = "DataSet1";//This refers to the dataset name in the RDLC file
+            rds.Value = dt;
+            report.DataSources.Add(rds);
+            Byte[] mybytes = report.Render("WORD");
+            //Byte[] mybytes = report.Render("PDF"); for exporting to PDF
+            using (FileStream fs = File.Create(@"C:\Users\Jonathan Rodriguez\Desktop\SalSlip.doc"))
             {
-                Microsoft.Reporting.WebForms.Warning warnings;
-                string fileName = "test";
-                string streamIds;
-                string mimeType = string.Empty;
-                string encoding = string.Empty;
-                string extension = string.Empty;
-                ReportViewer viewer = new ReportViewer();
-                viewer.ProcessingMode = ProcessingMode.Local;
-                //viewer.ServerReport.ReportServerUrl = new Uri("http://server/ReportServer_SQL2008R2");
-                viewer.LocalReport.ReportPath = "/Reportes/MatriculaCompleta.rdlc";
-
-                Byte[] bytes = viewer.LocalReport.Render("PDF");
-
-                Response.Buffer = true;
-                Response.Clear();
-                Response.ContentType = mimeType;
-                Response.AddHeader("content-disposition", ("attachment; filename=" + fileName + ".") + extension);
-                Response.BinaryWrite(bytes);
-                Response.Flush();
+                fs.Write(mybytes, 0, mybytes.Length);
             }
         }
 

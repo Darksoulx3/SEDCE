@@ -8,22 +8,39 @@
     </div>
     <div style="margin-left:auto; margin-right:auto; text-align:center; margin-top:60px">
         <div style="margin-top:30px">
-            <div>
-                <asp:Label ID="lblCarrera" runat="server" Text="Carrera: "></asp:Label>
-                <asp:DropDownList ID="ddlCarrera" runat="server" Width="200px" DataSourceID="SqlDataSource" DataTextField="nombre_carrera" DataValueField="nombre_carrera" OnSelectedIndexChanged="ddlCarrera_SelectedIndexChanged"></asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:SEDCEConString %>" SelectCommand="SELECT [nombre_carrera] FROM [carrera] ORDER BY [id_carrera]"></asp:SqlDataSource>
-            </div>
-            <div style="margin-right:48px; margin-top:30px">
+            <div style="margin-right:48px">
                 <asp:Label ID="lblTipodeReporte" runat="server" Text="Tipo de reporte: " ></asp:Label>
                 <asp:DropDownList ID="ddlTipoReporte" runat="server" Width="200px" OnSelectedIndexChanged="ddlTipoReporte_SelectedIndexChanged">
-                    <asp:ListItem>ALUMNOS DE NUEVO INGRESO LIC. Y POS.</asp:ListItem>
-                    <asp:ListItem>EGRESADOS DE LIC. Y POS.</asp:ListItem>
-                    <asp:ListItem>MATRICULA TOTAL DE LIC. Y POS.</asp:ListItem>
+                    <asp:ListItem>ALUMNOS DE NUEVO INGRESO LICENCIATURA.</asp:ListItem>
+                    <asp:ListItem>EGRESADOS DE LICENCIATURA.</asp:ListItem>
+                    <asp:ListItem>MATRICULA TOTAL DE LICENCIATURA.</asp:ListItem>
                 </asp:DropDownList>
+            </div>
+            <div style="margin-top:30px">
+                <asp:Label ID="lblCarrera" runat="server" Text="Carrera: "></asp:Label>
+                <asp:DropDownList ID="ddlCarrera" runat="server" Width="200px" OnSelectedIndexChanged="ddlCarrera_SelectedIndexChanged">
+                    <asp:ListItem>TODAS</asp:ListItem>
+                    <asp:ListItem>ING. BIOMEDICA</asp:ListItem>
+                    <asp:ListItem>ING. EN INFORMATICA</asp:ListItem>
+                    <asp:ListItem>ING. IND. 100 INGLES</asp:ListItem>
+                    <asp:ListItem>INGENIERIA ELECTRICA</asp:ListItem>
+                    <asp:ListItem>INGENIERIA ELECTRONICA</asp:ListItem>
+                    <asp:ListItem>INGENIERIA EN GESTION EMPRESARIAL</asp:ListItem>
+                    <asp:ListItem>INGENIERIA EN SISTEMAS COMPUTACIONALES</asp:ListItem>
+                    <asp:ListItem>INGENIERIA INDUSTRIAL</asp:ListItem>
+                    <asp:ListItem>INGENIERIA MECANICA</asp:ListItem>
+                    <asp:ListItem>INGENIERIA MECATRONICA</asp:ListItem>
+                    <asp:ListItem>LICENCIATURA EN ADMINISTRACION</asp:ListItem>
+                    <asp:ListItem>MAESTRIA EN ADMINISTRACION</asp:ListItem>
+                    <asp:ListItem>MAESTRIA EN CIENCIAS DE LA COMPUTACION</asp:ListItem>
+                    <asp:ListItem>MAESTRIA EN INGENIERIA ELECTRONICA</asp:ListItem>
+                    <asp:ListItem>MAESTRIA EN INGENIERIA INDUSTRIAL</asp:ListItem>
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:SEDCEConString %>" SelectCommand="SELECT [nombre_carrera] FROM [carrera] ORDER BY [id_carrera]"></asp:SqlDataSource>
             </div>
             <div style="margin-right:0px; margin-top:30px">
                 <asp:Label ID="lblPeriodo" runat="server" Text="Periodo: " ></asp:Label>
-                <asp:DropDownList ID="DropDownList1" runat="server" Width="200px" OnSelectedIndexChanged="ddlTipoReporte_SelectedIndexChanged">
+                <asp:DropDownList ID="ddlPeriodo" runat="server" Width="200px" OnSelectedIndexChanged="ddlTipoReporte_SelectedIndexChanged">
                     <asp:ListItem>2017-1</asp:ListItem>
                 </asp:DropDownList>
             </div>
@@ -34,7 +51,7 @@
                 </asp:DropDownList>
             </div>
             <div style="margin-top:30px">
-                <asp:Button ID="btnReporte" runat="server" Text="Crear reporte" OnClick="btnReporte_Click" />
+                <asp:Button ID="btnReporte" runat="server" Text="Ver reporte" OnClick="btnReporte_Click" />
             </div>
             <div>
             </div>
