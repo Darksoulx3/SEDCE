@@ -123,6 +123,7 @@
     <Compile Include="Menu.ascx.designer.cs">
       <DependentUpon>Menu.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Notas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reporteador.aspx.cs">
       <DependentUpon>Reporteador.aspx</DependentUpon>
