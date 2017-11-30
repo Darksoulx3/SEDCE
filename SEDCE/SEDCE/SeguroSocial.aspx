@@ -16,12 +16,10 @@
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
             </div>
             <div style="margin-top:30px">
-                <asp:GridView ID="gvNSS" runat="server" AutoGenerateColumns="False" Height="178px" Width="641px">
-                    <Columns>
-                        <asp:BoundField HeaderText="NOMBRE" ReadOnly="True" />
-                        <asp:BoundField HeaderText="NO. DE CONTROL" ReadOnly="True" />
-                        <asp:BoundField HeaderText="NUMERO DE SEGURO SOCIAL" ReadOnly="True" />
-                    </Columns>
+                <asp:GridView ID="gvNSS" runat="server" Height="201px" Width="641px">
+                    <EditRowStyle Height="5px" />
+                    <HeaderStyle Height="10px" />
+                    <RowStyle Height="10px" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="DSSeguroSocial" runat="server"></asp:SqlDataSource>
             </div>

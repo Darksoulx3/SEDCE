@@ -25,47 +25,41 @@ namespace SEDCE
             if (TipodeBusqueda == 0)
             {
                 string cnnstring = ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString;
-                string query;
-                SqlConnection con = new SqlConnection();
-                SqlCommand cmd = new SqlCommand();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                con.ConnectionString = cnnstring;
-                con.Open();
-                cmd.Connection = con;
-                query = "SELECT * FROM SEGURO_SOCIAL WHERE NOMBRE LIKE ('%@NOMBRE%')";
-                cmd.Parameters.AddWithValue("@NOMBRE", txtBBuscar.Text);
-                cmd.CommandText = query;
-                da.Fill(dt);
-                gvNSS.DataSource = dt;
+                string query = "SELECT * FROM SEGURO_SOCIAL WHERE NOMBRE LIKE '%"+txtBBuscar.Text+"%'";
+                SqlConnection con = new SqlConnection(cnnstring);
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                sda.Fill(ds);
+                gvNSS.DataSource = ds;
                 gvNSS.DataBind();
-                con.Close();
             }
             else 
             {
                 string cnnstring = ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString;
-                string query;
-                SqlConnection con = new SqlConnection();
-                SqlCommand cmd = new SqlCommand();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                con.ConnectionString = cnnstring;
-                con.Open();
-                cmd.Connection = con;
-                query = "SELECT * FROM SEGURO_SOCIAL WHERE NO_CONTROL LIKE ('%@NO_CONTROL%')";
-                cmd.Parameters.AddWithValue("@NO_CONTROL", txtBBuscar.Text);
-                cmd.CommandText = query;
-                da.Fill(dt);
-                gvNSS.DataSource = dt;
-                gvNSS.DataBind();
-                con.Close();
+                string query = "SELECT * FROM SEGURO_SOCIAL WHERE NO_CONTROL LIKE '%"+txtBBuscar.Text+"%'";
+                SqlConnection con = new SqlConnection(cnnstring);
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                sda.Fill(ds);
+                gvNSS.DataSource = ds;
+                gvNSS.DataBind();  
             }
-            
         }
 
         protected void txtBBuscar_TextChanged(object sender, EventArgs e)
         {
             CargarData(ddlBusqueda.SelectedIndex);
+            if (((gvNSS.Rows.Count + 1) * 10 )< 50)
+            {
+                gvNSS.Height = (gvNSS.Rows.Count + 1) * 10;
+            }
+            else 
+            {
+                gvNSS.Height = 50;
+            }
+            
         }
     }
 }
