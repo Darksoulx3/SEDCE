@@ -154,10 +154,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site1.Master" />
-    <Content Include="DataBaseBackup\SEDSE.BAK" />
     <Content Include="SEDCEdataset.xsc">
       <DependentUpon>SEDCEdataset.xsd</DependentUpon>
     </Content>
+    <Content Include="DataBaseBackup\SEDSE.BAK" />
     <None Include="SEDCEdataset.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
