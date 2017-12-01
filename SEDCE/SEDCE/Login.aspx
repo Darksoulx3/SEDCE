@@ -5,6 +5,9 @@
         <asp:Label ID="Titulo" runat="server" Text="Inicio de sesión" Font-Underline="true" Font-Size="X-Large"></asp:Label>
     </div>
     <div style="margin-left:auto; margin-right:auto; text-align:center; margin-top:60px">
+        <div style="margin-bottom:10px">
+            <asp:Label ID="lblError" runat="server" Text="" ForeColor="Red" Font-Italic="true"></asp:Label>
+        </div>
             <div>
                 <asp:Label ID="lblUsuario" runat="server" Text="Usuario: "></asp:Label>
                 <asp:TextBox ID="txtBUsuario" runat="server" Width="200px"></asp:TextBox>

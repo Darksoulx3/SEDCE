@@ -38,6 +38,17 @@ namespace SEDCE
                 con.Close();
                 Response.Redirect("Inicio.aspx");
             }
+            else 
+            {
+                if (txtBUsuario.Text == "" | txtxBPassword.Text == "")
+                {
+                    lblError.Text = "Falto llenar alguno de los campos";
+                }
+                else
+                {
+                    lblError.Text = "Usuario o contraseña incorrectos";
+                }
+            }
         }
     }
 }
