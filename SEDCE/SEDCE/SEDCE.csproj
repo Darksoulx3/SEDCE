@@ -80,6 +80,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConeccionesBD.cs" />
     <Compile Include="Configuraciones.aspx.cs">
       <DependentUpon>Configuraciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -131,10 +132,10 @@
     <Compile Include="Reportes.aspx.designer.cs">
       <DependentUpon>Reportes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SEDSEDataSet.Designer.cs">
+    <Compile Include="SEDCEdataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SEDSEDataSet.xsd</DependentUpon>
+      <DependentUpon>SEDCEdataset.xsd</DependentUpon>
     </Compile>
     <Compile Include="SeguroSocial.aspx.cs">
       <DependentUpon>SeguroSocial.aspx</DependentUpon>
@@ -153,16 +154,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site1.Master" />
-    <Content Include="SEDSEDataSet.xsc">
-      <DependentUpon>SEDSEDataSet.xsd</DependentUpon>
+    <Content Include="SEDCEdataset.xsc">
+      <DependentUpon>SEDCEdataset.xsd</DependentUpon>
     </Content>
-    <None Include="SEDSEDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SEDSEDataSet.Designer.cs</LastGenOutput>
+    <Content Include="DataBaseBackup\SEDSE.BAK" />
+    <None Include="SEDCEdataset.xsd">
       <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEDCEdataset.Designer.cs</LastGenOutput>
     </None>
-    <Content Include="SEDSEDataSet.xss">
-      <DependentUpon>SEDSEDataSet.xsd</DependentUpon>
+    <Content Include="SEDCEdataset.xss">
+      <DependentUpon>SEDCEdataset.xsd</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

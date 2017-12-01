@@ -43,64 +43,43 @@ namespace SEDCE
             }
 
             LocalReport report = new LocalReport();
-
+            ConeccionesBD Consulta = new ConeccionesBD();
+            ReportDataSource RDS = new ReportDataSource();
             switch (ddlTipoReporte.SelectedIndex)
             {
-                case 0: report.ReportPath = "Reportes/MatriculaCompleta.rdlc";
-                    SEDSEDataSetTableAdapters.MATRICULA_COMPLETATableAdapter ta = new SEDSEDataSetTableAdapters.MATRICULA_COMPLETATableAdapter();
-                    SEDSEDataSet.MATRICULA_COMPLETADataTable dt = new SEDSEDataSet.MATRICULA_COMPLETADataTable();
-                    ta.Fill(dt);
-                    ReportDataSource rds = new ReportDataSource();
-                    rds.Name = "DataSet1";//This refers to the dataset name in the RDLC file
-                    rds.Value = dt;
-                    report.DataSources.Add(rds);
-                    Byte[] mybytes = report.Render(Formato);
-
-                    using (FileStream fs = new FileStream(Server.MapPath(nombre), FileMode.Append, FileAccess.Write))
-                    {
-                        fs.Write(mybytes, 0, mybytes.Length);
-                    }
-                    Response.AppendHeader("content-disposition", "attachment; filename=" + nombre);
-                    Response.TransmitFile(nombre);
-                    Response.End();
+                case 0: 
                     break;
-                case 1: report.ReportPath = "Reportes/MatriculaCompleta.rdlc";
-                    SEDSEDataSetTableAdapters.MATRICULA_COMPLETATableAdapter ta1 = new SEDSEDataSetTableAdapters.MATRICULA_COMPLETATableAdapter();
-                    SEDSEDataSet.MATRICULA_COMPLETADataTable dt1 = new SEDSEDataSet.MATRICULA_COMPLETADataTable();
-                    ta1.Fill(dt1);
-                    ReportDataSource rds1 = new ReportDataSource();
-                    rds1.Name = "DataSet1";//This refers to the dataset name in the RDLC file
-                    rds1.Value = dt1;
-                    report.DataSources.Add(rds1);
-                    Byte[] mybytes1 = report.Render(Formato);
-
-                    using (FileStream fs = new FileStream(Server.MapPath(nombre), FileMode.Append, FileAccess.Write))
-                    {
-                        fs.Write(mybytes1, 0, mybytes1.Length);
-                    }
-                    Response.AppendHeader("content-disposition", "attachment; filename=" + nombre);
-                    Response.TransmitFile(nombre);
-                    Response.End();
+                case 1: 
                     break;
-                case 2: report.ReportPath = "Reportes/MatriculaCompleta.rdlc";
-                    SEDSEDataSetTableAdapters.MATRICULA_COMPLETATableAdapter ta2 = new SEDSEDataSetTableAdapters.MATRICULA_COMPLETATableAdapter();
-                    SEDSEDataSet.MATRICULA_COMPLETADataTable dt2 = new SEDSEDataSet.MATRICULA_COMPLETADataTable();
-                    ta2.Fill(dt2);
-                    ReportDataSource rds2 = new ReportDataSource();
-                    rds2.Name = "DataSet1";//This refers to the dataset name in the RDLC file
-                    rds2.Value = dt2;
-                    report.DataSources.Add(rds2);
-                    Byte[] mybytes2 = report.Render(Formato);
-
-                    using (FileStream fs = new FileStream(Server.MapPath(nombre), FileMode.Append, FileAccess.Write))
+                case 2: 
+                    if (ddlCarrera.SelectedItem.ToString().Equals("TODAS"))
                     {
-                        fs.Write(mybytes2, 0, mybytes2.Length);
+                        report.ReportPath = "Reportes/MatriculaCompleta.rdlc";
+                        SEDCEdatasetTableAdapters.MATRICULA_COMPLETATableAdapter MC = new SEDCEdatasetTableAdapters.MATRICULA_COMPLETATableAdapter();
+                        MC.Fill(Consulta.MatriculaCompleta());
+                        RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
+                        RDS.Value = Consulta.MatriculaCompleta();
                     }
-                    Response.AppendHeader("content-disposition", "attachment; filename=" + nombre);
-                    Response.TransmitFile(nombre);
-                    Response.End();
+                    else 
+                    {
+                        report.ReportPath = "Reportes/MatriculaCompleta.rdlc";
+                        SEDCEdatasetTableAdapters.MATRICULA_COMPLETA_CARRERA_ESPECIFICATableAdapter MC = new SEDCEdatasetTableAdapters.MATRICULA_COMPLETA_CARRERA_ESPECIFICATableAdapter();
+                        MC.Fill(Consulta.MatriculaCompletaCarreraEspecifica(ddlCarrera.SelectedItem.ToString()),ddlCarrera.SelectedItem.ToString());
+                        RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
+                        RDS.Value = Consulta.MatriculaCompletaCarreraEspecifica(ddlCarrera.SelectedItem.ToString());
+                    }
                     break;
             }
+            report.DataSources.Add(RDS);
+            Byte[] mybytes2 = report.Render(Formato);
+
+            using (FileStream fs = new FileStream(Server.MapPath(nombre), FileMode.Append, FileAccess.Write))
+            {
+                fs.Write(mybytes2, 0, mybytes2.Length);
+            }
+            Response.AppendHeader("content-disposition", "attachment; filename=" + nombre);
+            Response.TransmitFile(nombre);
+            Response.End();
         }
     }
 }
