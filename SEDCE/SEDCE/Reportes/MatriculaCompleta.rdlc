@@ -6,34 +6,34 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.63542in</Width>
+              <Width>0.35in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.52083in</Width>
+              <Width>0.35in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.39111in</Width>
+              <Width>2.64042in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.81597in</Width>
+              <Width>0.33in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.41in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.79167in</Width>
+              <Width>0.55in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.60417in</Width>
+              <Width>0.75417in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.32958in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.71875in</Width>
+              <Width>0.36in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>0.67708in</Width>
+              <Width>0.35208in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -49,8 +49,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Genero</Value>
-                              <Style />
+                              <Value>Sexo</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -80,7 +82,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Edad</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -110,7 +114,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Carrera</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -139,8 +145,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Semestre</Value>
-                              <Style />
+                              <Value>Sem.</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -169,8 +177,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Competencia</Value>
-                              <Style />
+                              <Value>Comp.</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -200,7 +210,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Extanjero</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -230,7 +242,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Lengua Indigena</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -259,8 +273,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Discapacidad</Value>
-                              <Style />
+                              <Value>Disc.</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -289,8 +305,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Promedio</Value>
-                              <Style />
+                              <Value>Prom.</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -319,8 +337,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Cantidad</Value>
-                              <Style />
+                              <Value>Cant.</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -355,7 +375,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Genero.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -387,7 +409,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Edad.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -419,7 +443,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Carrera.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -449,7 +475,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Semestre.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -481,7 +509,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Competencia.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -513,7 +543,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Extanjero.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -545,7 +577,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Lengua_Indigena.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -577,7 +611,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Discapacidad.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -609,7 +645,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Promedio.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -641,7 +679,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!Cantidad.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -697,7 +737,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>0.79042in</Top>
         <Height>0.5in</Height>
-        <Width>10.155in</Width>
+        <Width>6.42625in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -712,7 +752,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Sum(Fields!Cantidad.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -721,10 +763,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox33</rd:DefaultName>
-        <Top>1.35986in</Top>
-        <Left>9.47792in</Left>
-        <Height>0.25in</Height>
-        <Width>0.67708in</Width>
+        <Top>1.29042in</Top>
+        <Left>6.07417in</Left>
+        <Height>0.16667in</Height>
+        <Width>0.35208in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -744,7 +786,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Total</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style>
@@ -753,10 +797,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox34</rd:DefaultName>
-        <Top>1.35986in</Top>
-        <Left>8.75917in</Left>
-        <Height>0.25in</Height>
-        <Width>0.71875in</Width>
+        <Top>1.29042in</Top>
+        <Left>5.65723in</Left>
+        <Height>0.16667in</Height>
+        <Width>0.38917in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -772,10 +816,10 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>10.155in</Width>
+  <Width>6.4375in</Width>
   <Page>
     <PageHeader>
-      <Height>1in</Height>
+      <Height>0.90625in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -796,8 +840,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox22</rd:DefaultName>
-          <Top>0.30083in</Top>
-          <Left>2.625in</Left>
+          <Top>0.36333in</Top>
+          <Left>0.7in</Left>
           <Height>0.54292in</Height>
           <Width>4.88542in</Width>
           <Style>
