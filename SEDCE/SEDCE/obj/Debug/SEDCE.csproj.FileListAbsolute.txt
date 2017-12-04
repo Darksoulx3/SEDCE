@@ -23,8 +23,5 @@ C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.
 C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.compiled
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.cache
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.compiled
-C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\Microsoft.ReportViewer.Common.dll
-C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\Microsoft.ReportViewer.WebForms.dll
-C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\Microsoft.ReportViewer.WinForms.dll
-C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\Microsoft.ReportViewer.WebForms.xml
-C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\Microsoft.ReportViewer.WinForms.xml
+C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\bin\EntityFramework.dll
+C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\bin\EntityFramework.xml

@@ -31,22 +31,49 @@ namespace SEDCE {
         protected global::System.Web.UI.WebControls.Label lblSubirArchivo;
         
         /// <summary>
-        /// txtBSubirArchivo control.
+        /// lblPeriodo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBSubirArchivo;
+        protected global::System.Web.UI.WebControls.Label lblPeriodo;
         
         /// <summary>
-        /// btnSubirArchivo control.
+        /// ddlPeriodo1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubirArchivo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPeriodo1;
+        
+        /// <summary>
+        /// lblSeparador control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSeparador;
+        
+        /// <summary>
+        /// ddlPeriodo2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPeriodo2;
+        
+        /// <summary>
+        /// fuBD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuBD;
         
         /// <summary>
         /// btnSubir control.
@@ -65,15 +92,6 @@ namespace SEDCE {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// TextBox1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
         /// Button1 control.

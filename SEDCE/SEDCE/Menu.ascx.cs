@@ -23,8 +23,8 @@ namespace SEDCE
                     MenuItem CERRAR = new MenuItem("Cerrar Sesion", "", "", "~/Login.aspx");
                     Menu1.Items.Add(CERRAR);
                     //                    Tipos de usuarios
-                    //        0                   1                     2
-                    //  Administrador           Jefe             Chico del servicio
+                    //        0                      1                  2                      3
+                    //   Administrador      GestorDeInformacion        Jefe                 Auxiliar
                     string Nivel = Session["NIVEL"].ToString();
                     if (Nivel == "1")
                     {
@@ -35,9 +35,17 @@ namespace SEDCE
                         if (Nivel == "2")
                         {
                             Menu1.Items.Remove(Menu1.FindItem("Configuraciones"));
-                            Menu1.Items.Remove(Menu1.FindItem("Graficador"));
-                            Menu1.Items.Remove(Menu1.FindItem("Reporteador"));
                             Menu1.Items.Remove(Menu1.FindItem("Carga de Archivos"));
+                        }
+                        else 
+                        {
+                            if (Nivel == "3")
+                            {
+                                Menu1.Items.Remove(Menu1.FindItem("Graficador"));
+                                Menu1.Items.Remove(Menu1.FindItem("Reporteador"));
+                                Menu1.Items.Remove(Menu1.FindItem("Configuraciones"));
+                                Menu1.Items.Remove(Menu1.FindItem("Carga de Archivos"));
+                            }
                         }
                     }
                 }

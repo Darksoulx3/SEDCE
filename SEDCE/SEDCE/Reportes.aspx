@@ -12,7 +12,6 @@
                 <asp:Label ID="lblTipodeReporte" runat="server" Text="Tipo de reporte: " ></asp:Label>
                 <asp:DropDownList ID="ddlTipoReporte" runat="server" Width="200px" >
                     <asp:ListItem>ALUMNOS DE NUEVO INGRESO LICENCIATURA.</asp:ListItem>
-                    <asp:ListItem>EGRESADOS DE LICENCIATURA.</asp:ListItem>
                     <asp:ListItem>MATRICULA TOTAL DE LICENCIATURA.</asp:ListItem>
                 </asp:DropDownList>
             </div>
@@ -20,8 +19,8 @@
                 <asp:Label ID="lblCarrera" runat="server" Text="Carrera: "></asp:Label>
                 <asp:DropDownList ID="ddlCarrera" runat="server" Width="200px">
                     <asp:ListItem>TODAS</asp:ListItem>
-                    <asp:ListItem>ING. BIOMEDICA</asp:ListItem>
-                    <asp:ListItem>ING. EN INFORMATICA</asp:ListItem>
+                    <asp:ListItem>INGENIERIA BIOMEDICA</asp:ListItem>
+                    <asp:ListItem>INGENIERIA EN INFORMATICA</asp:ListItem>
                     <asp:ListItem>ING. IND. 100 INGLES</asp:ListItem>
                     <asp:ListItem>INGENIERIA ELECTRICA</asp:ListItem>
                     <asp:ListItem>INGENIERIA ELECTRONICA</asp:ListItem>
@@ -41,7 +40,7 @@
             <div style="margin-right:0px; margin-top:30px">
                 <asp:Label ID="lblPeriodo" runat="server" Text="Periodo: " ></asp:Label>
                 <asp:DropDownList ID="ddlPeriodo" runat="server" Width="200px">
-                    <asp:ListItem>2017-1</asp:ListItem>
+                    <asp:ListItem>20173</asp:ListItem>
                 </asp:DropDownList>
             </div>
             <div style="margin-right:2px;margin-top:30px">
@@ -53,7 +52,7 @@
                 </asp:DropDownList>
             </div>
             <div style="margin-top:30px">
-                <asp:Button ID="btnReporte" runat="server" Text="Ver reporte" OnClick="btnReporte_Click" />
+                <asp:Button ID="btnReporte" runat="server" Text="Generar Reporte" OnClick="btnReporte_Click" OnClientClick="return confirm('Seguro que desea generar el reporte con las caracteristicas seleccionadas?')" />
             </div>
             <div>
             </div>
