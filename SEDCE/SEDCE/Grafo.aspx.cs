@@ -53,13 +53,13 @@ namespace SEDCE
                 indice[x] = Convert.ToDouble(DS_P.Tables[0].Rows[x][7]);
             }
 
-            Chart1.Series[0].ChartType = SeriesChartType.Line; 
+            Chart1.Series[0].ChartType = SeriesChartType.Line;
 
             Chart1.Titles.Add("Mayor indice de reprobacion del periodo: " + "17-1");
 
             Chart1.Series[0].Points.DataBindXY(materias, indice);
             Chart1.Series[0].IsValueShownAsLabel = true;
-            }
+        }
 
         /* Falta que eliga el tipo de grafica.
          * Falta arreglar el query con formats.

@@ -21,6 +21,11 @@ namespace SEDCE
 
         protected void btnReporte_Click(object sender, EventArgs e)
         {
+            ImprimirReporte();
+        }
+
+        private void ImprimirReporte()
+        {
             string Carrera = ddlCarrera.SelectedItem.ToString();
             string Formato = ddlFormato.SelectedItem.ToString();
             string Periodo = ddlPeriodo.SelectedItem.ToString();
@@ -30,7 +35,7 @@ namespace SEDCE
             {
                 nombre += " DE TODAS LAS CARRERAS";
             }
-            else 
+            else
             {
                 nombre += " DE " + Carrera;
             }
@@ -48,25 +53,39 @@ namespace SEDCE
             switch (ddlTipoReporte.SelectedIndex)
             {
                 case 0:
+                    if (ddlCarrera.SelectedItem.ToString().Equals("TODAS"))
+                    {
+                        report.ReportPath = "Reportes/NuevoIngreso.rdlc";
+                        SEDCEdatasetTableAdapters.NUEVO_INGRESOTableAdapter MC = new SEDCEdatasetTableAdapters.NUEVO_INGRESOTableAdapter();
+                        MC.Fill(Consulta.NuevoIngreso(ddlPeriodo.SelectedItem.ToString()), Convert.ToDouble(ddlPeriodo.SelectedItem.ToString()));
+                        RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
+                        RDS.Value = Consulta.NuevoIngreso(ddlPeriodo.SelectedItem.ToString());
+                    }
+                    else
+                    {
+                        report.ReportPath = "Reportes/NuevoIngreso.rdlc";
+                        SEDCEdatasetTableAdapters.NUEVO_INGRESO_CARRERA_ESPECIFICATableAdapter MC = new SEDCEdatasetTableAdapters.NUEVO_INGRESO_CARRERA_ESPECIFICATableAdapter();
+                        MC.Fill(Consulta.NuevoIngresoCarreraEspecifica(ddlCarrera.SelectedItem.ToString(), ddlPeriodo.SelectedItem.ToString()), Convert.ToDouble(ddlPeriodo.SelectedItem.ToString()), ddlCarrera.SelectedItem.ToString());
+                        RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
+                        RDS.Value = Consulta.NuevoIngresoCarreraEspecifica(ddlCarrera.SelectedItem.ToString(), ddlPeriodo.SelectedItem.ToString());
+                    }
                     break;
-                case 1: 
-                    break;
-                case 2: 
+                case 1:
                     if (ddlCarrera.SelectedItem.ToString().Equals("TODAS"))
                     {
                         report.ReportPath = "Reportes/MatriculaCompleta.rdlc";
                         SEDCEdatasetTableAdapters.MATRICULA_COMPLETATableAdapter MC = new SEDCEdatasetTableAdapters.MATRICULA_COMPLETATableAdapter();
-                        MC.Fill(Consulta.MatriculaCompleta());
+                        MC.Fill(Consulta.MatriculaCompleta(ddlPeriodo.SelectedItem.ToString()), Convert.ToDouble(ddlPeriodo.SelectedItem.ToString()));
                         RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
-                        RDS.Value = Consulta.MatriculaCompleta();
+                        RDS.Value = Consulta.MatriculaCompleta(ddlPeriodo.SelectedItem.ToString());
                     }
-                    else 
+                    else
                     {
                         report.ReportPath = "Reportes/MatriculaCompleta.rdlc";
                         SEDCEdatasetTableAdapters.MATRICULA_COMPLETA_CARRERA_ESPECIFICATableAdapter MC = new SEDCEdatasetTableAdapters.MATRICULA_COMPLETA_CARRERA_ESPECIFICATableAdapter();
-                        MC.Fill(Consulta.MatriculaCompletaCarreraEspecifica(ddlCarrera.SelectedItem.ToString()),ddlCarrera.SelectedItem.ToString());
+                        MC.Fill(Consulta.MatriculaCompletaCarreraEspecifica(ddlCarrera.SelectedItem.ToString(), ddlPeriodo.SelectedItem.ToString()), ddlCarrera.SelectedItem.ToString(), Convert.ToDouble(ddlPeriodo.SelectedItem.ToString()));
                         RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
-                        RDS.Value = Consulta.MatriculaCompletaCarreraEspecifica(ddlCarrera.SelectedItem.ToString());
+                        RDS.Value = Consulta.MatriculaCompletaCarreraEspecifica(ddlCarrera.SelectedItem.ToString(), ddlPeriodo.SelectedItem.ToString());
                     }
                     break;
             }

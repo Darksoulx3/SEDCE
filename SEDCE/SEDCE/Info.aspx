@@ -33,6 +33,9 @@
             <div>
                 <asp:FileUpload ID="fuBD" runat="server"/>
             </div>
+            <div>
+                <asp:Label ID="lblResultado" runat="server" Text="" ForeColor="Red"></asp:Label>
+            </div>
             <div style="margin-top:30px">
                 <asp:Button ID="btnSubir" runat="server" Text="Subir datos" OnClick="btnSubir_Click" />
             </div>
