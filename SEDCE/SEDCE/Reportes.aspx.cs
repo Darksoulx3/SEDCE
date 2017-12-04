@@ -57,17 +57,17 @@ namespace SEDCE
                     {
                         report.ReportPath = "Reportes/NuevoIngreso.rdlc";
                         SEDCEdatasetTableAdapters.NUEVO_INGRESOTableAdapter MC = new SEDCEdatasetTableAdapters.NUEVO_INGRESOTableAdapter();
-                        MC.Fill(Consulta.NuevoIngreso(ddlPeriodo.SelectedItem.ToString()), Convert.ToDouble(ddlPeriodo.SelectedItem.ToString()));
+                        MC.Fill(Consulta.NuevoIngreso());
                         RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
-                        RDS.Value = Consulta.NuevoIngreso(ddlPeriodo.SelectedItem.ToString());
+                        RDS.Value = Consulta.NuevoIngreso();
                     }
                     else
                     {
                         report.ReportPath = "Reportes/NuevoIngreso.rdlc";
                         SEDCEdatasetTableAdapters.NUEVO_INGRESO_CARRERA_ESPECIFICATableAdapter MC = new SEDCEdatasetTableAdapters.NUEVO_INGRESO_CARRERA_ESPECIFICATableAdapter();
-                        MC.Fill(Consulta.NuevoIngresoCarreraEspecifica(ddlCarrera.SelectedItem.ToString(), ddlPeriodo.SelectedItem.ToString()), Convert.ToDouble(ddlPeriodo.SelectedItem.ToString()), ddlCarrera.SelectedItem.ToString());
+                        MC.Fill(Consulta.NuevoIngresoCarreraEspecifica(ddlCarrera.SelectedItem.ToString()), ddlCarrera.SelectedItem.ToString());
                         RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
-                        RDS.Value = Consulta.NuevoIngresoCarreraEspecifica(ddlCarrera.SelectedItem.ToString(), ddlPeriodo.SelectedItem.ToString());
+                        RDS.Value = Consulta.NuevoIngresoCarreraEspecifica(ddlCarrera.SelectedItem.ToString());
                     }
                     break;
                 case 1:
@@ -75,17 +75,17 @@ namespace SEDCE
                     {
                         report.ReportPath = "Reportes/MatriculaCompleta.rdlc";
                         SEDCEdatasetTableAdapters.MATRICULA_COMPLETATableAdapter MC = new SEDCEdatasetTableAdapters.MATRICULA_COMPLETATableAdapter();
-                        MC.Fill(Consulta.MatriculaCompleta(ddlPeriodo.SelectedItem.ToString()), Convert.ToDouble(ddlPeriodo.SelectedItem.ToString()));
+                        MC.Fill(Consulta.MatriculaCompleta());
                         RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
-                        RDS.Value = Consulta.MatriculaCompleta(ddlPeriodo.SelectedItem.ToString());
+                        RDS.Value = Consulta.MatriculaCompleta();
                     }
                     else
                     {
                         report.ReportPath = "Reportes/MatriculaCompleta.rdlc";
                         SEDCEdatasetTableAdapters.MATRICULA_COMPLETA_CARRERA_ESPECIFICATableAdapter MC = new SEDCEdatasetTableAdapters.MATRICULA_COMPLETA_CARRERA_ESPECIFICATableAdapter();
-                        MC.Fill(Consulta.MatriculaCompletaCarreraEspecifica(ddlCarrera.SelectedItem.ToString(), ddlPeriodo.SelectedItem.ToString()), ddlCarrera.SelectedItem.ToString(), Convert.ToDouble(ddlPeriodo.SelectedItem.ToString()));
+                        MC.Fill(Consulta.MatriculaCompletaCarreraEspecifica(ddlCarrera.SelectedItem.ToString()), ddlCarrera.SelectedItem.ToString());
                         RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
-                        RDS.Value = Consulta.MatriculaCompletaCarreraEspecifica(ddlCarrera.SelectedItem.ToString(), ddlPeriodo.SelectedItem.ToString());
+                        RDS.Value = Consulta.MatriculaCompletaCarreraEspecifica(ddlCarrera.SelectedItem.ToString());
                     }
                     break;
             }

@@ -38,8 +38,8 @@
                 <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:SEDCEConString %>" SelectCommand="SELECT [nombre_carrera] FROM [carrera] ORDER BY [id_carrera]"></asp:SqlDataSource>
             </div>
             <div style="margin-right:0px; margin-top:30px">
-                <asp:Label ID="lblPeriodo" runat="server" Text="Periodo: " ></asp:Label>
-                <asp:DropDownList ID="ddlPeriodo" runat="server" Width="200px">
+                <asp:Label ID="lblPeriodo" runat="server" Text="Periodo: " Visible="False" ></asp:Label>
+                <asp:DropDownList ID="ddlPeriodo" runat="server" Width="200px" Visible="False">
                     <asp:ListItem>20173</asp:ListItem>
                 </asp:DropDownList>
             </div>
