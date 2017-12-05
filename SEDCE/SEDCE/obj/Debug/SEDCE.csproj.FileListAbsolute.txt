@@ -4,7 +4,6 @@ c:\users\jonathan rodriguez\documents\visual studio 2012\Projects\SEDCE\SEDCE\ob
 c:\users\jonathan rodriguez\documents\visual studio 2012\Projects\SEDCE\SEDCE\obj\Debug\SEDCE.pdb
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\bin\SEDCE.dll
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\bin\SEDCE.pdb
-C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csprojResolveAssemblyReference.cache
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.dll
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.pdb
 C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\SEDCE.dll.config
@@ -23,3 +22,4 @@ C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.
 C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.compiled
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.cache
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.compiled
+C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csprojResolveAssemblyReference.cache

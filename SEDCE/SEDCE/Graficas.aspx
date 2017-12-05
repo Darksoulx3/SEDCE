@@ -18,8 +18,8 @@
                 <asp:Label ID="lblCarrera" runat="server" Text="Carrera: "></asp:Label>
                 <asp:DropDownList ID="ddlCarrera" runat="server" Width="200px">
                     <asp:ListItem>TODAS</asp:ListItem>
-                    <asp:ListItem>ING. BIOMEDICA</asp:ListItem>
-                    <asp:ListItem>ING. EN INFORMATICA</asp:ListItem>
+                    <asp:ListItem>INGENIERIA BIOMEDICA</asp:ListItem>
+                    <asp:ListItem>INGENIERIA EN INFORMATICA</asp:ListItem>
                     <asp:ListItem>ING. IND. 100 INGLES</asp:ListItem>
                     <asp:ListItem>INGENIERIA ELECTRICA</asp:ListItem>
                     <asp:ListItem>INGENIERIA ELECTRONICA</asp:ListItem>
@@ -31,7 +31,7 @@
                     <asp:ListItem>LICENCIATURA EN ADMINISTRACION</asp:ListItem>
                     <asp:ListItem>MAESTRIA EN ADMINISTRACION</asp:ListItem>
                     <asp:ListItem>MAESTRIA EN CIENCIAS DE LA COMPUTACION</asp:ListItem>
-                    <asp:ListItem>MAESTRIA EN INGENIERIA ELECTRONICA</asp:ListItem>
+                    <asp:ListItem>MAESTRIA EN ELECTRONICA</asp:ListItem>
                     <asp:ListItem>MAESTRIA EN INGENIERIA INDUSTRIAL</asp:ListItem>
                 </asp:DropDownList>
             </div>
