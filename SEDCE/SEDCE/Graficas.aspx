@@ -5,16 +5,22 @@
         <asp:Label ID="Titulo" runat="server" Text="Graficador" Font-Underline="true" Font-Size="X-Large"></asp:Label>
     </div>
     <div style="margin-left:auto; margin-right:auto; text-align:center; margin-top:60px">
-            
-            <div style="margin-right:49px; margin-top:30px">
-                <asp:Label ID="lblTipodeGrafica" runat="server" Text="Tipo de Grafica: " ></asp:Label>
-                <asp:DropDownList ID="ddlTipoReporte" runat="server" Width="200px">
-                    <asp:ListItem>INDICE DE REPROBACÍON.</asp:ListItem>
-                    <asp:ListItem>EFICIENCIA DE EGRESOS.</asp:ListItem>
-                    <asp:ListItem>EFICIENCIA DE TERMINACÍON.</asp:ListItem>
+            <div style="margin-right:14px">
+                <asp:Label ID="lblCategoria" runat="server" Text="Categoria: " ></asp:Label>
+                <asp:DropDownList ID="ddlCategoria" runat="server" Width="200px" AutoPostBack="True" OnSelectedIndexChanged="ddlCategoria_SelectedIndexChanged">
+                    <asp:ListItem>NUEVO INGRESO</asp:ListItem>
+                    <asp:ListItem>MATRICULA TOTAL</asp:ListItem>
+                    <asp:ListItem>ESTADISTICAS</asp:ListItem>
                 </asp:DropDownList>
             </div>
-        <div style="margin-top:30px">
+            <div style="margin-right:49px; margin-top:30px">
+                <asp:Label ID="lblTipodeGrafica" runat="server" Text="Tipo de Grafica: " ></asp:Label>
+                <asp:DropDownList ID="ddlTipoGrafica" runat="server" Width="200px">
+                    <asp:ListItem>SEXO POR CARRERA</asp:ListItem>
+                    <asp:ListItem>EDAD POR CARRERA</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+        <div style="margin-top:30px; margin-left:1px">
                 <asp:Label ID="lblCarrera" runat="server" Text="Carrera: "></asp:Label>
                 <asp:DropDownList ID="ddlCarrera" runat="server" Width="200px">
                     <asp:ListItem>TODAS</asp:ListItem>
@@ -35,16 +41,16 @@
                     <asp:ListItem>MAESTRIA EN INGENIERIA INDUSTRIAL</asp:ListItem>
                 </asp:DropDownList>
             </div>
-            <div style="margin-right:49px;margin-top:30px">
-                <asp:Label ID="lblTipoGrafica" runat="server" Text="Estilo de gráfica: " ></asp:Label>
+            <div style="margin-right:60px;margin-top:30px">
+                <asp:Label ID="lblEstilo" runat="server" Text="Estilo de gráfica: " ></asp:Label>
                 <asp:DropDownList ID="ddlEstiloGrafica" runat="server" Width="200px">
                     <asp:ListItem>COLUMNAS</asp:ListItem>
                     <asp:ListItem>PUNTOS</asp:ListItem>
                 </asp:DropDownList>
             </div>
-            <div style="margin-right:3px;margin-top:30px">
-                <asp:Label ID="lblFormato" runat="server" Text="Periodo: " ></asp:Label>
-                <asp:DropDownList ID="ddlPeriodo" runat="server" Width="200px">
+            <div style="margin-left:2px;margin-top:30px">
+                <asp:Label ID="lblPeriodo" runat="server" Text="Periodo: " Visible="False" ></asp:Label>
+                <asp:DropDownList ID="ddlPeriodo" runat="server" Width="200px" Visible="False">
                     <asp:ListItem>17-1</asp:ListItem>
                 </asp:DropDownList>
             </div>

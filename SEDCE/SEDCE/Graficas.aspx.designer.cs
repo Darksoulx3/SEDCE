@@ -22,6 +22,24 @@ namespace SEDCE {
         protected global::System.Web.UI.WebControls.Label Titulo;
         
         /// <summary>
+        /// lblCategoria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCategoria;
+        
+        /// <summary>
+        /// ddlCategoria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
+        
+        /// <summary>
         /// lblTipodeGrafica control.
         /// </summary>
         /// <remarks>
@@ -31,13 +49,13 @@ namespace SEDCE {
         protected global::System.Web.UI.WebControls.Label lblTipodeGrafica;
         
         /// <summary>
-        /// ddlTipoReporte control.
+        /// ddlTipoGrafica control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTipoReporte;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoGrafica;
         
         /// <summary>
         /// lblCarrera control.
@@ -58,13 +76,13 @@ namespace SEDCE {
         protected global::System.Web.UI.WebControls.DropDownList ddlCarrera;
         
         /// <summary>
-        /// lblTipoGrafica control.
+        /// lblEstilo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTipoGrafica;
+        protected global::System.Web.UI.WebControls.Label lblEstilo;
         
         /// <summary>
         /// ddlEstiloGrafica control.
@@ -76,13 +94,13 @@ namespace SEDCE {
         protected global::System.Web.UI.WebControls.DropDownList ddlEstiloGrafica;
         
         /// <summary>
-        /// lblFormato control.
+        /// lblPeriodo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFormato;
+        protected global::System.Web.UI.WebControls.Label lblPeriodo;
         
         /// <summary>
         /// ddlPeriodo control.
