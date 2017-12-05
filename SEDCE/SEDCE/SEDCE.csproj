@@ -174,7 +174,7 @@
     <Content Include="SEDCEdataset.xsc">
       <DependentUpon>SEDCEdataset.xsd</DependentUpon>
     </Content>
-    <Content Include="DataBaseBackup\SEDSE4-12-2017.BAK" />
+    <Content Include="DataBaseBackup\SEDSE5-12-2017.BAK" />
     <None Include="SEDCEdataset.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
