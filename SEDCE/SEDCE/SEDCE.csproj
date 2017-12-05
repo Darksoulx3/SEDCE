@@ -145,6 +145,10 @@
     <Compile Include="Reportes.aspx.designer.cs">
       <DependentUpon>Reportes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SEDCEdataset.cs">
+      <DependentUpon>SEDCEdataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SEDCEdataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -174,7 +178,6 @@
     <None Include="SEDCEdataset.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SEDCEdataset.Designer.cs</LastGenOutput>
     </None>
     <Content Include="SEDCEdataset.xss">
       <DependentUpon>SEDCEdataset.xsd</DependentUpon>
@@ -192,8 +195,8 @@
     <EmbeddedResource Include="Reportes\MatriculaTotalPorSexo.rdlc" />
     <EmbeddedResource Include="Reportes\MatriculaTotalPromedio.rdlc" />
     <EmbeddedResource Include="Reportes\MatriculaTotalSemestre.rdlc" />
-    <EmbeddedResource Include="Reportes\NuevoIngresoPorEdad.rdlc" />
     <EmbeddedResource Include="Reportes\NuevoIngresoPorSexo.rdlc" />
+    <EmbeddedResource Include="Reportes\NuevoIngresoPorEdad.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ArchivosTemporales\" />

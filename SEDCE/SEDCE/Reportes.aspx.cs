@@ -28,7 +28,7 @@ namespace SEDCE
         {
             string Carrera = ddlCarrera.SelectedItem.ToString();
             string Formato = ddlFormato.SelectedItem.ToString();
-            string nombre = ddlCategoria.SelectedItem.ToString();
+            string nombre = "~/ArchivosTemporales/"+ddlCategoria.SelectedItem.ToString();
 
             nombre += " "+ddlReporte.SelectedItem.ToString();
 
@@ -235,9 +235,17 @@ namespace SEDCE
             {
                 fs.Write(mybytes2, 0, mybytes2.Length);
             }
-            Response.AppendHeader("content-disposition", "attachment; filename=" + nombre);
-            Response.TransmitFile(nombre);
-            Response.End();
+
+            try
+            {
+                Response.AppendHeader("content-disposition", "attachment; filename=" + nombre);
+                Response.TransmitFile(nombre);
+                Response.Flush();
+            }
+            finally 
+            {
+                File.Delete(Server.MapPath(nombre));
+            }
         }
 
         protected void ddlCategoria_SelectedIndexChanged(object sender, EventArgs e)
