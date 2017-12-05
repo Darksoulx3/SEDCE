@@ -187,8 +187,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reportes\MatriculaCompleta.rdlc" />
-    <EmbeddedResource Include="Reportes\NuevoIngreso.rdlc" />
+    <EmbeddedResource Include="Reportes\MatriculaTotalDiscapacidad.rdlc" />
+    <EmbeddedResource Include="Reportes\MatriculaTotalPorEdad.rdlc" />
+    <EmbeddedResource Include="Reportes\MatriculaTotalPorSexo.rdlc" />
+    <EmbeddedResource Include="Reportes\MatriculaTotalPromedio.rdlc" />
+    <EmbeddedResource Include="Reportes\MatriculaTotalSemestre.rdlc" />
+    <EmbeddedResource Include="Reportes\NuevoIngresoPorEdad.rdlc" />
+    <EmbeddedResource Include="Reportes\NuevoIngresoPorSexo.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ArchivosTemporales\" />

@@ -11,55 +11,183 @@ namespace SEDCE
 {
     public class ConeccionesBD
     {
-        public SEDCEdataset.MATRICULA_COMPLETA_CARRERA_ESPECIFICADataTable MatriculaCompletaCarreraEspecifica(string Carrera)
+        #region Nuevo_Ingreso
+        public SEDCEdataset.NUEVO_INGRESO_POR_SEXODataTable NuevoIngresoPorSexo() 
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("MATRICULA_COMPLETA_CARRERA_ESPECIFICA", con);
+            SqlCommand cmd = new SqlCommand("NUEVO_INGRESO_POR_SEXO", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.NUEVO_INGRESO_POR_SEXODataTable dt = new SEDCEdataset.NUEVO_INGRESO_POR_SEXODataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.NUEVO_INGRESO_POR_SEXO_CARRERA_ESPECIFICADataTable NuevoIngresoPorSexoCarreraEspeficica(string Carrera) 
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("NUEVO_INGRESO_POR_SEXO_CARRERA_ESPECIFICA", con);
             cmd.CommandType = CommandType.StoredProcedure;
             con.Open();
             cmd.Parameters.Add(new SqlParameter("@CARRERA", Carrera));
-            SEDCEdataset.MATRICULA_COMPLETA_CARRERA_ESPECIFICADataTable dt = new SEDCEdataset.MATRICULA_COMPLETA_CARRERA_ESPECIFICADataTable();
+            SEDCEdataset.NUEVO_INGRESO_POR_SEXO_CARRERA_ESPECIFICADataTable dt = new SEDCEdataset.NUEVO_INGRESO_POR_SEXO_CARRERA_ESPECIFICADataTable();
             dt.Load(cmd.ExecuteReader());
             con.Close();
             return dt;
         }
 
-        public SEDCEdataset.MATRICULA_COMPLETADataTable MatriculaCompleta()
+        public SEDCEdataset.NUEVO_INGRESO_POR_EDADDataTable NuevoIngresoPorEdad()
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("MATRICULA_COMPLETA", con);
+            SqlCommand cmd = new SqlCommand("NUEVO_INGRESO_POR_EDAD", con);
             cmd.CommandType = CommandType.StoredProcedure;
             con.Open();
-            SEDCEdataset.MATRICULA_COMPLETADataTable dt = new SEDCEdataset.MATRICULA_COMPLETADataTable();
+            SEDCEdataset.NUEVO_INGRESO_POR_EDADDataTable dt = new SEDCEdataset.NUEVO_INGRESO_POR_EDADDataTable();
             dt.Load(cmd.ExecuteReader());
             con.Close();
             return dt;
         }
 
-        public SEDCEdataset.NUEVO_INGRESO_CARRERA_ESPECIFICADataTable NuevoIngresoCarreraEspecifica(string Carrera)
+        public SEDCEdataset.NUEVO_INGRESO_POR_EDAD_CARRERA_ESPECIFICADataTable NuevoIngresoPorEdadCarreraEspeficica(string Carrera)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("NUEVO_INGRESO_CARRERA_ESPECIFICA", con);
+            SqlCommand cmd = new SqlCommand("NUEVO_INGRESO_POR_EDAD_CARRERA_ESPECIFICA", con);
             cmd.CommandType = CommandType.StoredProcedure;
             con.Open();
             cmd.Parameters.Add(new SqlParameter("@CARRERA", Carrera));
-            SEDCEdataset.NUEVO_INGRESO_CARRERA_ESPECIFICADataTable dt = new SEDCEdataset.NUEVO_INGRESO_CARRERA_ESPECIFICADataTable();
+            SEDCEdataset.NUEVO_INGRESO_POR_EDAD_CARRERA_ESPECIFICADataTable dt = new SEDCEdataset.NUEVO_INGRESO_POR_EDAD_CARRERA_ESPECIFICADataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+        #endregion
+        #region Matricula_total
+        public SEDCEdataset.MATRICULA_TOTAL_DISCAPACIDADDataTable MatriculaTotalDiscapacidad() 
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("MATRICULA_TOTAL_DISCAPACIDAD", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.MATRICULA_TOTAL_DISCAPACIDADDataTable dt = new SEDCEdataset.MATRICULA_TOTAL_DISCAPACIDADDataTable();
             dt.Load(cmd.ExecuteReader());
             con.Close();
             return dt;
         }
 
-        public SEDCEdataset.NUEVO_INGRESODataTable NuevoIngreso()
+        public SEDCEdataset.MATRICULA_TOTAL_DISCAPACIDAD_CARRERA_ESPECIFICADataTable MatriculaTotalDiscapacidadCarreraEspecifica(string Carrera)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("NUEVO_INGRESO", con);
+            SqlCommand cmd = new SqlCommand("MATRICULA_TOTAL_DISCAPACIDAD_CARRERA_ESPECIFICA", con);
             cmd.CommandType = CommandType.StoredProcedure;
             con.Open();
-            SEDCEdataset.NUEVO_INGRESODataTable dt = new SEDCEdataset.NUEVO_INGRESODataTable();
+            cmd.Parameters.Add(new SqlParameter("@CARRERA", Carrera));
+            SEDCEdataset.MATRICULA_TOTAL_DISCAPACIDAD_CARRERA_ESPECIFICADataTable dt = new SEDCEdataset.MATRICULA_TOTAL_DISCAPACIDAD_CARRERA_ESPECIFICADataTable();
             dt.Load(cmd.ExecuteReader());
             con.Close();
             return dt;
         }
+
+        public SEDCEdataset.MATRICULA_TOTAL_POR_SEXODataTable MatriculaTotalSexo()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("MATRICULA_TOTAL_POR_SEXO", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.MATRICULA_TOTAL_POR_SEXODataTable dt = new SEDCEdataset.MATRICULA_TOTAL_POR_SEXODataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.MATRICULA_TOTAL_POR_SEXO_CARRERA_ESPECIFICADataTable MatriculaTotalSexoCarreraEspecifica(string Carrera)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("MATRICULA_TOTAL_POR_SEXO_CARRERA_ESPECIFICA", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.Add(new SqlParameter("@CARRERA", Carrera));
+            SEDCEdataset.MATRICULA_TOTAL_POR_SEXO_CARRERA_ESPECIFICADataTable dt = new SEDCEdataset.MATRICULA_TOTAL_POR_SEXO_CARRERA_ESPECIFICADataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.MATRICULA_TOTAL_POR_EDADDataTable MatriculaTotalEdad()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("MATRICULA_TOTAL_POR_EDAD", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.MATRICULA_TOTAL_POR_EDADDataTable dt = new SEDCEdataset.MATRICULA_TOTAL_POR_EDADDataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.MATRICULA_TOTAL_POR_EDAD_CARRERA_ESPECIFICADataTable MatriculaTotalEdadCarreraEspecifica(string Carrera)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("MATRICULA_TOTAL_POR_EDAD_CARRERA_ESPECIFICA", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.Add(new SqlParameter("@CARRERA", Carrera));
+            SEDCEdataset.MATRICULA_TOTAL_POR_EDAD_CARRERA_ESPECIFICADataTable dt = new SEDCEdataset.MATRICULA_TOTAL_POR_EDAD_CARRERA_ESPECIFICADataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.MATRICULA_TOTAL_SEMESTREDataTable MatriculaTotalSemestre()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("MATRICULA_TOTAL_SEMESTRE", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.MATRICULA_TOTAL_SEMESTREDataTable dt = new SEDCEdataset.MATRICULA_TOTAL_SEMESTREDataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.MATRICULA_TOTAL_SEMESTRE_CARRERA_ESPECIFICADataTable MatriculaTotalSemestreCarreraEspecifica(string Carrera)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("MATRICULA_TOTAL_SEMESTRE_CARRERA_ESPECIFICA", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.Add(new SqlParameter("@CARRERA", Carrera));
+            SEDCEdataset.MATRICULA_TOTAL_SEMESTRE_CARRERA_ESPECIFICADataTable dt = new SEDCEdataset.MATRICULA_TOTAL_SEMESTRE_CARRERA_ESPECIFICADataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.MATRICULA_TOTAL_PROMEDIODataTable MatriculaTotalPromedio()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("MATRICULA_TOTAL_PROMEDIO", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.MATRICULA_TOTAL_PROMEDIODataTable dt = new SEDCEdataset.MATRICULA_TOTAL_PROMEDIODataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.MATRICULA_TOTAL_PROMEDIO_CARRERA_ESPECIFICADataTable MatriculaTotalPromedioCarreraEspecifica(string Carrera)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("MATRICULA_TOTAL_PROMEDIO_CARRERA_ESPECIFICA", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.Add(new SqlParameter("@CARRERA", Carrera));
+            SEDCEdataset.MATRICULA_TOTAL_PROMEDIO_CARRERA_ESPECIFICADataTable dt = new SEDCEdataset.MATRICULA_TOTAL_PROMEDIO_CARRERA_ESPECIFICADataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+        #endregion
 
         public double IDCarrera(string carrera)
         {

@@ -8,11 +8,19 @@
     </div>
     <div style="margin-left:auto; margin-right:auto; text-align:center; margin-top:60px">
         <div style="margin-top:30px">
-            <div style="margin-right:48px">
-                <asp:Label ID="lblTipodeReporte" runat="server" Text="Tipo de reporte: " ></asp:Label>
-                <asp:DropDownList ID="ddlTipoReporte" runat="server" Width="200px" >
-                    <asp:ListItem>ALUMNOS DE NUEVO INGRESO LICENCIATURA.</asp:ListItem>
-                    <asp:ListItem>MATRICULA TOTAL DE LICENCIATURA.</asp:ListItem>
+            <div style="margin-right:14px">
+                <asp:Label ID="lblCategoria" runat="server" Text="Categoria: " ></asp:Label>
+                <asp:DropDownList ID="ddlCategoria" runat="server" Width="200px" AutoPostBack="True" OnSelectedIndexChanged="ddlCategoria_SelectedIndexChanged">
+                    <asp:ListItem>NUEVO INGRESO</asp:ListItem>
+                    <asp:ListItem>MATRICULA TOTAL</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div style="margin-right:46px; margin-top:30px">
+                <asp:Label ID="lblReporte" runat="server" Text="Tipo de reporte: " ></asp:Label>
+                <asp:DropDownList ID="ddlReporte" runat="server" Width="200px">
+                    <asp:ListItem>SEXO POR CARRERA</asp:ListItem>
+                    <asp:ListItem>EDAD POR CARRERA</asp:ListItem>
+                    <%--<asp:ListItem>PROCEDENCIA POR CARRERA</asp:ListItem>--%>
                 </asp:DropDownList>
             </div>
             <div style="margin-top:30px">
@@ -36,12 +44,6 @@
                     <asp:ListItem>MAESTRIA EN INGENIERIA INDUSTRIAL</asp:ListItem>
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:SEDCEConString %>" SelectCommand="SELECT [nombre_carrera] FROM [carrera] ORDER BY [id_carrera]"></asp:SqlDataSource>
-            </div>
-            <div style="margin-right:0px; margin-top:30px">
-                <asp:Label ID="lblPeriodo" runat="server" Text="Periodo: " Visible="False" ></asp:Label>
-                <asp:DropDownList ID="ddlPeriodo" runat="server" Width="200px" Visible="False">
-                    <asp:ListItem>20173</asp:ListItem>
-                </asp:DropDownList>
             </div>
             <div style="margin-right:2px;margin-top:30px">
                 <asp:Label ID="lblFormato" runat="server" Text="Formato: " ></asp:Label>
