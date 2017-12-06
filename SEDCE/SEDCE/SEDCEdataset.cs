@@ -1,6 +1,8 @@
-﻿namespace SEDCE {
-    
-    
-    public partial class SEDCEdataset {
+﻿namespace SEDCE
+{
+
+
+    public partial class SEDCEdataset
+    {
     }
 }
