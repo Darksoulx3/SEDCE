@@ -68,6 +68,7 @@
     <Content Include="Grafo.aspx" />
     <Content Include="img\banner.jpg" />
     <Content Include="img\box.jpg" />
+    <Content Include="img\check.png" />
     <Content Include="img\list-active.gif" />
     <Content Include="img\list-off-orange.gif" />
     <Content Include="img\list-on-orange.gif" />
