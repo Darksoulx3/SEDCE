@@ -23,8 +23,9 @@ namespace SEDCE
         {
             Session["Carrera"] = ddlCarrera.SelectedValue;
             Session["Periodo"] = ddlPeriodo.SelectedValue;
-            Session["Estilo"] = ddlEstiloGrafica.SelectedValue;
-
+            Session["Estilo"] = ddlEstiloGrafica.SelectedIndex;
+            Session["Tipo"] = ddlTipoGrafica.SelectedValue;
+            Session["Categoria"] = ddlCategoria.SelectedValue;
 
             Response.Redirect("Grafo.aspx");
         }
