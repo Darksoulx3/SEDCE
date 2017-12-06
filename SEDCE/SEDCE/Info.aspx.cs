@@ -44,7 +44,7 @@ namespace SEDCE
             }
             catch (Exception)
             {
-                // Consultas.RestoreDB();
+                Consultas.RestoreDB();
                 lblResultado.Text = "Error al actualizar base de datos revise el archivo porfavor";
             }
         }

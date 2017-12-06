@@ -56,7 +56,7 @@
                 <asp:ListItem>Administrador</asp:ListItem>
                 <asp:ListItem>Gestor de BD</asp:ListItem>
                 <asp:ListItem>Jefe de carrera</asp:ListItem>
-                <asp:ListItem>Auxiliar</asp:ListItem>
+                <%--<asp:ListItem>Auxiliar</asp:ListItem>--%>
             </asp:DropDownList>
         </div>
         <div style="margin-top:30px">

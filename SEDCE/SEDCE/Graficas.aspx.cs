@@ -34,11 +34,11 @@ namespace SEDCE
         {
             if (ddlCategoria.SelectedIndex == 0)
             {
-                ddlTipoGrafica.Items.Remove("ALUMNOS CON DISCAPACIDAD");
+                //ddlTipoGrafica.Items.Remove("ALUMNOS CON DISCAPACIDAD");
                 ddlTipoGrafica.Items.Remove("SEXO POR CARRERA");
                 ddlTipoGrafica.Items.Remove("EDAD POR CARRERA");
                 ddlTipoGrafica.Items.Remove("ALUMNOS POR SEMESTRE");
-                ddlTipoGrafica.Items.Remove("MAYOR PROMEDIO POR CARRERA");
+                //ddlTipoGrafica.Items.Remove("MAYOR PROMEDIO POR CARRERA");
 
                 ddlTipoGrafica.Items.Remove("EFICIENCIA DE EGRESO");
                 ddlTipoGrafica.Items.Remove("INDICE DE REPROBACION");
@@ -54,11 +54,11 @@ namespace SEDCE
             {
                 if (ddlCategoria.SelectedIndex == 1)
                 {
-                    ddlTipoGrafica.Items.Add("ALUMNOS CON DISCAPACIDAD");
+                    //ddlTipoGrafica.Items.Add("ALUMNOS CON DISCAPACIDAD");
                     ddlTipoGrafica.Items.Add("SEXO POR CARRERA");
                     ddlTipoGrafica.Items.Add("EDAD POR CARRERA");
                     ddlTipoGrafica.Items.Add("ALUMNOS POR SEMESTRE");
-                    ddlTipoGrafica.Items.Add("MAYOR PROMEDIO POR CARRERA");
+                    //ddlTipoGrafica.Items.Add("MAYOR PROMEDIO POR CARRERA");
 
                     ddlTipoGrafica.Items.Remove("EFICIENCIA DE EGRESO");
                     ddlTipoGrafica.Items.Remove("INDICE DE REPROBACION");
@@ -70,13 +70,13 @@ namespace SEDCE
                     lblPeriodo.Visible = false;
                     ddlPeriodo.Visible = false;
                 }
-                else 
+                else
                 {
-                    ddlTipoGrafica.Items.Remove("ALUMNOS CON DISCAPACIDAD");
+                    //ddlTipoGrafica.Items.Remove("ALUMNOS CON DISCAPACIDAD");
                     ddlTipoGrafica.Items.Remove("SEXO POR CARRERA");
                     ddlTipoGrafica.Items.Remove("EDAD POR CARRERA");
                     ddlTipoGrafica.Items.Remove("ALUMNOS POR SEMESTRE");
-                    ddlTipoGrafica.Items.Remove("MAYOR PROMEDIO POR CARRERA");
+                    //ddlTipoGrafica.Items.Remove("MAYOR PROMEDIO POR CARRERA");
 
                     ddlTipoGrafica.Items.Add("EFICIENCIA DE EGRESO");
                     ddlTipoGrafica.Items.Add("INDICE DE REPROBACION");
