@@ -23,10 +23,50 @@ namespace SEDCE
         private string estilo;
         private string tipo;
 
-        //public string Carrera { get => carrera; set => carrera = value; }
-        //public string Periodo { get => periodo; set => periodo = value; }
-        //public string Estilo { get => estilo; set => estilo = value; }
-        //public string Tipo { get => tipo; set => tipo = value; }
+        public string Carrera 
+        { 
+            get 
+            {
+                return carrera; 
+            }
+            set 
+            { 
+                carrera = value; 
+            }
+        }
+        public string Periodo 
+        { 
+            get 
+            { 
+                return periodo;
+            }
+            set 
+            {
+                periodo = value; 
+            }
+        }
+        public string Estilo 
+        { 
+            get 
+            {
+                return estilo; 
+            }
+            set 
+            { 
+                estilo = value; 
+            }
+        }
+        public string Tipo
+        {
+            get
+            {
+                return tipo;
+            }
+            set
+            {
+                tipo = value;
+            }
+        }
 
 
         protected void Page_Load(object sender, EventArgs e)

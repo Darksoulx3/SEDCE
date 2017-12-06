@@ -76,6 +76,24 @@ namespace SEDCE {
         protected global::System.Web.UI.WebControls.DropDownList ddlCarrera;
         
         /// <summary>
+        /// lblPeriodo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPeriodo;
+        
+        /// <summary>
+        /// ddlPeriodo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPeriodo;
+        
+        /// <summary>
         /// SqlDataSource control.
         /// </summary>
         /// <remarks>

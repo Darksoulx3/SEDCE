@@ -146,10 +146,6 @@
     <Compile Include="Reportes.aspx.designer.cs">
       <DependentUpon>Reportes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SEDCEdataset.cs">
-      <DependentUpon>SEDCEdataset.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="SEDCEdataset.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -172,13 +168,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site1.Master" />
+    <Content Include="DataBaseBackup\SEDSE5-12-2017.BAK" />
     <Content Include="SEDCEdataset.xsc">
       <DependentUpon>SEDCEdataset.xsd</DependentUpon>
     </Content>
-    <Content Include="DataBaseBackup\SEDSE5-12-2017.BAK" />
     <None Include="SEDCEdataset.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEDCEdataset.Designer.cs</LastGenOutput>
     </None>
     <Content Include="SEDCEdataset.xss">
       <DependentUpon>SEDCEdataset.xsd</DependentUpon>
@@ -191,6 +188,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reportes\EGRESADOS20142.rdlc" />
+    <EmbeddedResource Include="Reportes\EGRESADOS20141.rdlc" />
+    <EmbeddedResource Include="Reportes\EGRESADOS20132.rdlc" />
+    <EmbeddedResource Include="Reportes\EGRESADOS20131.rdlc" />
+    <EmbeddedResource Include="Reportes\EGRESADOS20122.rdlc" />
+    <EmbeddedResource Include="Reportes\EGRESADOS20102.rdlc" />
+    <EmbeddedResource Include="Reportes\EGRESADOS20111.rdlc" />
+    <EmbeddedResource Include="Reportes\EGRESADOS20112.rdlc" />
+    <EmbeddedResource Include="Reportes\EGRESADOS20121.rdlc" />
     <EmbeddedResource Include="Reportes\MatriculaTotalDiscapacidad.rdlc" />
     <EmbeddedResource Include="Reportes\MatriculaTotalPorEdad.rdlc" />
     <EmbeddedResource Include="Reportes\MatriculaTotalPorSexo.rdlc" />

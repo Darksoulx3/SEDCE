@@ -188,6 +188,114 @@ namespace SEDCE
             con.Close();
             return dt;
         }
+
+        public SEDCEdataset.EGRESADOS_20102DataTable Egresados20102() 
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("EGRESADOS_20102", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.EGRESADOS_20102DataTable dt = new SEDCEdataset.EGRESADOS_20102DataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.EGRESADOS_20111DataTable Egresados20111()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("EGRESADOS_20111", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.EGRESADOS_20111DataTable dt = new SEDCEdataset.EGRESADOS_20111DataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.EGRESADOS_20112DataTable Egresados20112()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("EGRESADOS_20112", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.EGRESADOS_20112DataTable dt = new SEDCEdataset.EGRESADOS_20112DataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.EGRESADOS_20121DataTable Egresados20121()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("EGRESADOS_20121", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.EGRESADOS_20121DataTable dt = new SEDCEdataset.EGRESADOS_20121DataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.EGRESADOS_20122DataTable Egresados20122()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("EGRESADOS_20122", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.EGRESADOS_20122DataTable dt = new SEDCEdataset.EGRESADOS_20122DataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.EGRESADOS_20131DataTable Egresados20131()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("EGRESADOS_20131", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.EGRESADOS_20131DataTable dt = new SEDCEdataset.EGRESADOS_20131DataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.EGRESADOS_20132DataTable Egresados20132()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("EGRESADOS_20132", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.EGRESADOS_20132DataTable dt = new SEDCEdataset.EGRESADOS_20132DataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.EGRESADOS_20141DataTable Egresados20141()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("EGRESADOS_20141", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.EGRESADOS_20141DataTable dt = new SEDCEdataset.EGRESADOS_20141DataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
+
+        public SEDCEdataset.EGRESADOS_20142DataTable Egresados20142()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("EGRESADOS_20142", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.EGRESADOS_20142DataTable dt = new SEDCEdataset.EGRESADOS_20142DataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
         #endregion
 
         public bool ExisteUsuario(string usuario) 
@@ -268,6 +376,11 @@ namespace SEDCE
                 case "ING. GESTION EMPRESARIAL": resultado = "32"; break;
                 case "ING. EN INFORMATICA": resultado = "33"; break;
                 case "ING. BIOMEDICA": resultado = "34"; break;
+                case "ESPECIALIZACION EN INGENIERIA ELECTRONICA": resultado = "998"; break;
+                case "MAESTRIA EN SISTEMAS INDUSTRIALES": resultado = "999"; break;
+                case "INGENIERIA INDUSTRIAL 100% INGLES": resultado = "35"; break;
+                case "LICENCIATURA EN INFORMATICA": resultado = "997"; break;
+                case "MAESTRIA EN INGENIERIA ELECTRONICA": resultado = "996"; break;
             }
             return Convert.ToDouble(resultado);
         }
@@ -289,6 +402,8 @@ namespace SEDCE
             con.Open();
             cmd.ExecuteNonQuery();
             cmd.CommandText = @"TRUNCATE TABLE ALUMNOS";
+            cmd.ExecuteNonQuery();
+            cmd.CommandText = @"TRUNCATE TABLE EGRESOS";
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -423,6 +538,61 @@ namespace SEDCE
             objbulk.ColumnMappings.Add(ds.Tables[0].Columns[7].ColumnName, "reprobados");
             objbulk.ColumnMappings.Add(ds.Tables[0].Columns[8].ColumnName, "aprobados");
             objbulk.ColumnMappings.Add(ds.Tables[0].Columns[10].ColumnName, "total_inscritos");
+            //inserting Datatable Records to DataBase    
+            con.Open();
+            objbulk.WriteToServer(Exceldt);
+            con.Close();
+        }
+
+        public void InsertarEgresos(string FilePath) 
+        {
+            string constr = string.Format(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + FilePath + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=1;';");
+            OleDbConnection Econ = new OleDbConnection(constr);
+            string Query = string.Format("Select * FROM [{0}]", "total_3$");
+            OleDbCommand Ecom = new OleDbCommand(Query, Econ);
+            Econ.Open();
+
+            DataSet ds = new DataSet();
+            OleDbDataAdapter oda = new OleDbDataAdapter(Query, Econ);
+            Econ.Close();
+            oda.Fill(ds);
+            ds.Tables[0].Columns.Add(new DataColumn("Id_carrera"));
+            for (int i = 0; i <= ds.Tables[0].Rows.Count - 1; i++)
+            {
+                ds.Tables[0].Rows[i]["Id_carrera"] = IDCarrera(ds.Tables[0].Rows[i][1].ToString());
+            }
+            DataTable Exceldt = ds.Tables[0];
+
+            string sqlconn = ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString;
+            SqlConnection con = new SqlConnection(sqlconn);
+
+            //creating object of SqlBulkCopy    
+            SqlBulkCopy objbulk = new SqlBulkCopy(con);
+            //assigning Destination table name    
+            objbulk.DestinationTableName = "egresos";
+            //Mapping Table column    
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[0].ColumnName, "periodo_ingreso");
+            objbulk.ColumnMappings.Add("Id_carrera", "id_carrera");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[2].ColumnName, "inscritos_generacion");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[12].ColumnName, "p20143");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[13].ColumnName, "p20151");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[14].ColumnName, "p20152");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[15].ColumnName, "p20153");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[16].ColumnName, "p20161");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[17].ColumnName, "p20162");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[18].ColumnName, "p20163");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[19].ColumnName, "p20171");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[20].ColumnName, "p20172");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[21].ColumnName, "p20173");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[22].ColumnName, "p20181");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[23].ColumnName, "p20182");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[24].ColumnName, "p20183");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[25].ColumnName, "p20191");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[26].ColumnName, "p20192");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[27].ColumnName, "p20193");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[28].ColumnName, "p20201");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[29].ColumnName, "p20202");
+            objbulk.ColumnMappings.Add(ds.Tables[0].Columns[30].ColumnName, "p20203");
             //inserting Datatable Records to DataBase    
             con.Open();
             objbulk.WriteToServer(Exceldt);

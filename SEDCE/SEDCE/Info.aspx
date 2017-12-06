@@ -9,7 +9,7 @@
             <div>
                 <asp:Label ID="lblSubirArchivo" runat="server" Text="Seleccione un archivo para cargar la base de datos: "></asp:Label>
             </div>
-            <div>
+            <%--<div>
                 <asp:Label ID="lblPeriodo" runat="server" Text="Seleccione un Periodo:"></asp:Label>
                 <asp:DropDownList ID="ddlPeriodo1" runat="server">
                     <asp:ListItem Value="2010"></asp:ListItem>
@@ -29,7 +29,7 @@
                     <asp:ListItem>2</asp:ListItem>
                     <asp:ListItem>3</asp:ListItem>
                 </asp:DropDownList>
-            </div>
+            </div>--%>
             <div>
                 <asp:FileUpload ID="fuBD" runat="server"/>
             </div>
@@ -39,7 +39,7 @@
             <div style="margin-top:30px">
                 <asp:Button ID="btnSubir" runat="server" Text="Subir datos" OnClick="btnSubir_Click" />
             </div>
-            <div style="margin-top:70px">
+            <%--<div style="margin-top:70px">
                 <asp:Label ID="Label1" runat="server" Text="Seleccione un arcivo para cargar la lista de seguro social: "></asp:Label>
             </div>
             <div>
@@ -47,7 +47,7 @@
             </div>
             <div style="margin-top:30px">
                 <asp:Button ID="Button2" runat="server" Text="Subir datos" />
-            </div>
+            </div>--%>
         </div>
     </div>
 </asp:Content>

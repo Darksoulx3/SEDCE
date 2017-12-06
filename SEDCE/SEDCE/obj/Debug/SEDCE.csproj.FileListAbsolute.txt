@@ -23,3 +23,10 @@ C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.cache
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.compiled
 C:\Users\jona0\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csprojResolveAssemblyReference.cache
+F:\sedce\SEDCE\SEDCE\SEDCE\bin\SEDCE.dll
+F:\sedce\SEDCE\SEDCE\SEDCE\bin\SEDCE.pdb
+F:\sedce\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csprojResolveAssemblyReference.cache
+F:\sedce\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.cache
+F:\sedce\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.compiled
+F:\sedce\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.dll
+F:\sedce\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.pdb

@@ -8,11 +8,12 @@
     </div>
     <div style="margin-left:auto; margin-right:auto; text-align:center; margin-top:60px">
         <div style="margin-top:30px">
-            <div style="margin-right:14px">
+            <div style="margin-right:12px">
                 <asp:Label ID="lblCategoria" runat="server" Text="Categoria: " ></asp:Label>
                 <asp:DropDownList ID="ddlCategoria" runat="server" Width="200px" AutoPostBack="True" OnSelectedIndexChanged="ddlCategoria_SelectedIndexChanged">
                     <asp:ListItem>NUEVO INGRESO</asp:ListItem>
                     <asp:ListItem>MATRICULA TOTAL</asp:ListItem>
+                    <asp:ListItem>ESTADISTICAS</asp:ListItem>
                 </asp:DropDownList>
             </div>
             <div style="margin-right:46px; margin-top:30px">
@@ -24,6 +25,7 @@
                 </asp:DropDownList>
             </div>
             <div style="margin-top:30px">
+                <div>
                 <asp:Label ID="lblCarrera" runat="server" Text="Carrera: "></asp:Label>
                 <asp:DropDownList ID="ddlCarrera" runat="server" Width="200px">
                     <asp:ListItem>TODAS</asp:ListItem>
@@ -42,6 +44,19 @@
                     <asp:ListItem>MAESTRIA EN CIENCIAS DE LA COMPUTACION</asp:ListItem>
                     <asp:ListItem>MAESTRIA EN INGENIERIA ELECTRONICA</asp:ListItem>
                     <asp:ListItem>MAESTRIA EN INGENIERIA INDUSTRIAL</asp:ListItem>
+                </asp:DropDownList>
+                    </div>
+                <asp:Label ID="lblPeriodo" runat="server" Text="Periodo: " Visible="false"></asp:Label>
+                <asp:DropDownList ID="ddlPeriodo" runat="server" Visible="false" Width="200px">
+                    <asp:ListItem>20102</asp:ListItem>
+                    <asp:ListItem>20111</asp:ListItem>
+                    <asp:ListItem>20112</asp:ListItem>
+                    <asp:ListItem>20121</asp:ListItem>
+                    <asp:ListItem>20122</asp:ListItem>
+                    <asp:ListItem>20131</asp:ListItem>
+                    <asp:ListItem>20132</asp:ListItem>
+                    <asp:ListItem>20141</asp:ListItem>
+                    <asp:ListItem>20142</asp:ListItem>
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:SEDCEConString %>" SelectCommand="SELECT [nombre_carrera] FROM [carrera] ORDER BY [id_carrera]"></asp:SqlDataSource>
             </div>

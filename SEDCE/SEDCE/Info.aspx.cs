@@ -39,6 +39,7 @@ namespace SEDCE
                 Consultas.CrearNuevoIngreso();
                 Consultas.InsertarNuevoIngreso(FilePath);
                 Consultas.InsertarMaterias(FilePath);
+                Consultas.InsertarEgresos(FilePath);
                 lblResultado.Text = "Base de datos actualizada correctamente";
             }
             catch (Exception)
