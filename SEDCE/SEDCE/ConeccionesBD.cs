@@ -62,6 +62,7 @@ namespace SEDCE
             return dt;
         }
         #endregion
+
         #region Matricula_total
         public SEDCEdataset.MATRICULA_TOTAL_DISCAPACIDADDataTable MatriculaTotalDiscapacidad() 
         {
@@ -188,6 +189,50 @@ namespace SEDCE
             return dt;
         }
         #endregion
+
+        public bool ExisteUsuario(string usuario) 
+        {
+            bool Existe = false;
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand(@"select * from usuario where nombre_usuario = '" + usuario + "'",con);
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                Existe = true;
+            }
+            con.Close();
+            return Existe;
+        
+        
+        }
+
+        public void CambiarUsuario(string usuario,string pass) 
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand(@"update usuario set contraseña_usuario = '"+pass+"' where nombre_usuario = '"+usuario+"'", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void AgregraUsuario(string usuario, string contra, int nivel) 
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand(@"insert into usuario values('"+ usuario + "','" + contra + "'," + nivel + ")", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public void EliminarUsuario(string usuario) 
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand(@"delete from usuario where nombre_usuario = '"+usuario+"'", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
         public double IDCarrera(string carrera)
         {

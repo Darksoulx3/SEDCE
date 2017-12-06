@@ -10,11 +10,11 @@
         </div>
             <div>
                 <asp:Label ID="lblUsuario" runat="server" Text="Usuario: "></asp:Label>
-                <asp:TextBox ID="txtBUsuario" runat="server" Width="200px"></asp:TextBox>
+                <asp:TextBox ID="txtBUsuario" runat="server" Width="200px" MaxLength="30" style="margin-bottom: 0px"></asp:TextBox>
             </div>
             <div style="margin-right:30px; margin-top:30px">
                 <asp:Label ID="lblPassword" runat="server" Text="Contraseña: " ></asp:Label>
-                <asp:TextBox ID="txtxBPassword" runat="server" Width="200px" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="txtxBPassword" runat="server" Width="200px" TextMode="Password" MaxLength="30"></asp:TextBox>
             </div>
             <div style="margin-top:30px">
                 <asp:Button ID="btnInicioSesion" runat="server" Text="Iniciar sesión" OnClick="btnInicioSesion_Click" />
