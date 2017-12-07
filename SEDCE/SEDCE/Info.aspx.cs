@@ -53,5 +53,22 @@ namespace SEDCE
             InsertExcelRecords(NombreArchivo);
             File.Delete(NombreArchivo);
         }
+
+        protected void btnDescargar_Click(object sender, EventArgs e)
+        {
+            string NombreArchivo = Server.MapPath("~/ArchivosTemporales/SEDSE.BAK");
+            ConeccionesBD Consultas = new ConeccionesBD();
+            Consultas.BackUpBD(NombreArchivo);
+            try
+            {
+                Response.AppendHeader("content-disposition", "attachment; filename=SEDSE.BAK");
+                Response.TransmitFile("~/ArchivosTemporales/SEDSE.BAK");
+                Response.Flush();
+            }
+            finally 
+            {
+                File.Delete(Server.MapPath("~/ArchivosTemporales/SEDSE.BAK"));
+            }
+        }
     }
 }
