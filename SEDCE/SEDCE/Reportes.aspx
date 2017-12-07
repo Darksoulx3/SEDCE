@@ -46,6 +46,7 @@
                     <asp:ListItem>MAESTRIA EN INGENIERIA INDUSTRIAL</asp:ListItem>
                 </asp:DropDownList>
                     </div>
+                <div style="margin-top:30px">
                 <asp:Label ID="lblPeriodo" runat="server" Text="Periodo: " Visible="false"></asp:Label>
                 <asp:DropDownList ID="ddlPeriodo" runat="server" Visible="false" Width="200px">
                     <asp:ListItem>20102</asp:ListItem>
@@ -59,6 +60,7 @@
                     <asp:ListItem>20142</asp:ListItem>
                 </asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:SEDCEConString %>" SelectCommand="SELECT [nombre_carrera] FROM [carrera] ORDER BY [id_carrera]"></asp:SqlDataSource>
+                    </div>
             </div>
             <div style="margin-right:2px;margin-top:30px">
                 <asp:Label ID="lblFormato" runat="server" Text="Formato: " ></asp:Label>

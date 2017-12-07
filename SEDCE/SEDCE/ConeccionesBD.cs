@@ -308,6 +308,19 @@ namespace SEDCE
             con.Close();
             return dt;
         }
+
+        public SEDCEdataset.INDICE_DE_REPROBACION_20171_CARRERADataTable IndiceReprobacion20171Carrera(string Carrera)
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("INDICE_DE_REPROBACION_20171_CARRERA", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            cmd.Parameters.Add(new SqlParameter("@CARRERA", Carrera));
+            SEDCEdataset.INDICE_DE_REPROBACION_20171_CARRERADataTable dt = new SEDCEdataset.INDICE_DE_REPROBACION_20171_CARRERADataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
         #endregion
 
         public bool ExisteUsuario(string usuario) 

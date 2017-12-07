@@ -343,11 +343,22 @@ namespace SEDCE
                     {
                         if (ddlPeriodo.SelectedIndex == 0)
                         {
-                            report.ReportPath = "Reportes/INDICEDEREPROBACION20171.rdlc";
-                            SEDCEdatasetTableAdapters.INDICE_DE_REPROBACION_20171TableAdapter MC = new SEDCEdatasetTableAdapters.INDICE_DE_REPROBACION_20171TableAdapter();
-                            MC.Fill(Consulta.IndiceReprobacion20171());
-                            RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
-                            RDS.Value = Consulta.IndiceReprobacion20171();
+                            if (ddlCarrera.SelectedItem.Text == "TODAS")
+                            {
+                                report.ReportPath = "Reportes/INDICEDEREPROBACION20171.rdlc";
+                                SEDCEdatasetTableAdapters.INDICE_DE_REPROBACION_20171TableAdapter MC = new SEDCEdatasetTableAdapters.INDICE_DE_REPROBACION_20171TableAdapter();
+                                MC.Fill(Consulta.IndiceReprobacion20171());
+                                RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
+                                RDS.Value = Consulta.IndiceReprobacion20171();
+                            }
+                            else 
+                            {
+                                report.ReportPath = "Reportes/INDICEDEREPROBACION20171.rdlc";
+                                SEDCEdatasetTableAdapters.INDICE_DE_REPROBACION_20171_CARRERATableAdapter MC = new SEDCEdatasetTableAdapters.INDICE_DE_REPROBACION_20171_CARRERATableAdapter();
+                                MC.Fill(Consulta.IndiceReprobacion20171Carrera(Carrera),Carrera);
+                                RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
+                                RDS.Value = Consulta.IndiceReprobacion20171Carrera(Carrera);
+                            }
                         }
                     }
                 }
@@ -471,6 +482,8 @@ namespace SEDCE
                     ddlPeriodo.Items.Add("20142");
                     ddlPeriodo.Items.Remove("20171");
                     ddlPeriodo.DataBind();
+                    lblCarrera.Visible = false;
+                    ddlCarrera.Visible = false;
                 }
                 else
                 {
@@ -485,6 +498,8 @@ namespace SEDCE
                     ddlPeriodo.Items.Remove("20142");
                     ddlPeriodo.Items.Add("20171");
                     ddlPeriodo.DataBind();
+                    lblCarrera.Visible = true;
+                    ddlCarrera.Visible = true;
                 }
             }
         }
