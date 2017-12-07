@@ -200,7 +200,63 @@ namespace SEDCE
 
                 case Categorias.Estadisticas:
 
+                    switch (tipo)
+                    {
+                        case ("EFICIENCIA DE EGRESO"):
 
+                            switch (periodo)
+                            {
+                                case ("20102"):
+                                    comandazo = "EGRESADOS_20102";
+                                    break;
+                                case ("20111"):
+                                    comandazo = "EGRESADOS_20111";
+                                    break;
+                                case ("20112"):
+                                    comandazo = "EGRESADOS_20112";
+                                    break;
+                                case ("20121"):
+                                    comandazo = "EGRESADOS_20121";
+                                    break;
+                                case ("20122"):
+                                    comandazo = "EGRESADOS_20122";
+                                    break;
+                                case ("20131"):
+                                    comandazo = "EGRESADOS_20131";
+                                    break;
+                                case ("20132"):
+                                    comandazo = "EGRESADOS_20132";
+                                    break;
+                                case ("20141"):
+                                    comandazo = "EGRESADOS_20141";
+                                    break;
+                                case ("20142"):
+                                    comandazo = "EGRESADOS_20142";
+                                    break;
+
+
+                                default:
+                                    break;
+                            }
+
+
+                            break;
+
+                        case ("INDICE DE REPROBACION"):
+                            if (carrera == "TODAS")
+                            {
+                                comandazo = "INDICE_DE_REPROBACION_20171";
+                            }
+                            else
+                            {
+                                comandazo = "INDICE_DE_REPROBACION_20171_CARRERA"; 
+                            }
+                            break;
+
+
+                        default:
+                            break;
+                    }
 
                     break;
 
@@ -749,7 +805,130 @@ namespace SEDCE
 
                 case Categorias.Estadisticas:
 
+                    switch (tipo)
+                    {
+                        case ("EFICIENCIA DE EGRESO"):
 
+
+                            for (int x = 0; x < DS_P.Tables[0].Rows.Count; x++)
+                            {
+                                materias.Add(DS_P.Tables[0].Rows[x][1].ToString());
+                                indice.Add(Convert.ToDouble(DS_P.Tables[0].Rows[x][9]));
+                            }
+
+                            Chart1.Legends.Add(new Legend("Def"));
+
+
+
+
+                            if (carrera != "TODAS")
+                            {
+                                //foreach (var item in Chart1.Series)
+                                //{
+                                //    item.IsValueShownAsLabel = true;
+                                //}
+                                //Chart1.Series[0].LegendText = carrera;
+                                //Chart1.ChartAreas[0].AxisX.LabelStyle.Angle = 90;
+                                //Chart1.ChartAreas[0].AxisX.Interval = 1;
+
+                                //Chart1.Series[0].Points.AddXY("16 años", indice[0]);
+
+                            }
+                            else
+                            {
+
+                                Chart1.Series[0].Points.DataBindXY(materias, indice);
+
+
+                                Chart1.Series[0].Legend = "Def";
+
+                                Chart1.Series[0].LegendText = "Eficiencia de Egresos";
+
+                                Chart1.Series[0].IsValueShownAsLabel = true;
+                                Chart1.ChartAreas[0].AxisX.LabelStyle.Angle = 90;
+                                Chart1.ChartAreas[0].AxisX.Interval = 1;
+                                Chart1.Titles.Add("Periodo " + periodo);
+                            }
+
+                            if (estilo == "0")
+                            {
+                                foreach (var item in Chart1.Series)
+                                {
+                                    item.ChartType = SeriesChartType.Column;
+                                }
+                            }
+                            else if (estilo == "1")
+                            {
+                                foreach (var item in Chart1.Series)
+                                {
+                                    item.ChartType = SeriesChartType.Line;
+                                }
+                            }
+                            break;
+
+                        case ("INDICE DE REPROBACION"):
+                            for (int x = 0; x < DS_P.Tables[0].Rows.Count; x++)
+                            {
+                                materias.Add(DS_P.Tables[0].Rows[x][1].ToString());
+                                indice.Add(Convert.ToDouble(DS_P.Tables[0].Rows[x][7]));
+                            }
+
+                            Chart1.Legends.Add(new Legend("Def"));
+
+
+
+
+                            if (carrera != "TODAS")
+                            {
+                                Chart1.Series[0].Points.DataBindXY(materias, indice);
+
+
+                                Chart1.Series[0].Legend = "Def";
+
+                                Chart1.Series[0].LegendText = "Indice de Reprobacion";
+
+                                Chart1.Series[0].IsValueShownAsLabel = true;
+                                Chart1.ChartAreas[0].AxisX.LabelStyle.Angle = 90;
+                                Chart1.ChartAreas[0].AxisX.Interval = 1;
+                                Chart1.Titles.Add("Periodo " + periodo);
+
+                            }
+                            else
+                            {
+
+                                Chart1.Series[0].Points.DataBindXY(materias, indice);
+
+
+                                Chart1.Series[0].Legend = "Def";
+
+                                Chart1.Series[0].LegendText = "Indice de Reprobacion";
+
+                                Chart1.Series[0].IsValueShownAsLabel = true;
+                                Chart1.ChartAreas[0].AxisX.LabelStyle.Angle = 90;
+                                Chart1.ChartAreas[0].AxisX.Interval = 1;
+                                Chart1.Titles.Add("Periodo " + periodo);
+                            }
+
+                            if (estilo == "0")
+                            {
+                                foreach (var item in Chart1.Series)
+                                {
+                                    item.ChartType = SeriesChartType.Column;
+                                }
+                            }
+                            else if (estilo == "1")
+                            {
+                                foreach (var item in Chart1.Series)
+                                {
+                                    item.ChartType = SeriesChartType.Line;
+                                }
+                            }
+                            break;
+
+
+                        default:
+                            break;
+                    }
 
                     break;
 

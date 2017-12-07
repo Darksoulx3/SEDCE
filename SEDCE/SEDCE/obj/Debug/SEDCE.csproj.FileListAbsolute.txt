@@ -30,3 +30,8 @@ F:\sedce\SEDCE\SEDCE\SEDCE\obj\Debug\RdlCompile.compiled
 F:\sedce\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.dll
 F:\sedce\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.pdb
 C:\Users\Jonathan Rodriguez\Source\Repos\SEDCE\SEDCE\SEDCE\obj\Debug\SEDCE.csprojResolveAssemblyReference.cache
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\Microsoft.ReportViewer.WebForms.dll
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\Microsoft.ReportViewer.WinForms.dll
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\Microsoft.ReportViewer.WebForms.xml
+C:\Users\angel\Source\Repos\SEDCE\SEDCE\SEDCE\bin\Microsoft.ReportViewer.WinForms.xml
