@@ -18,7 +18,7 @@
             </div>
             <div style="margin-right:46px; margin-top:30px">
                 <asp:Label ID="lblReporte" runat="server" Text="Tipo de reporte: " ></asp:Label>
-                <asp:DropDownList ID="ddlReporte" runat="server" Width="200px">
+                <asp:DropDownList ID="ddlReporte" runat="server" Width="200px" AutoPostBack="true" OnSelectedIndexChanged="ddlReporte_SelectedIndexChanged">
                     <asp:ListItem>SEXO POR CARRERA</asp:ListItem>
                     <asp:ListItem>EDAD POR CARRERA</asp:ListItem>
                     <%--<asp:ListItem>PROCEDENCIA POR CARRERA</asp:ListItem>--%>

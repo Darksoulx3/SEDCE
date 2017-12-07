@@ -34,15 +34,11 @@ namespace SEDCE
         {
             if (ddlCategoria.SelectedIndex == 0)
             {
-                //ddlTipoGrafica.Items.Remove("ALUMNOS CON DISCAPACIDAD");
                 ddlTipoGrafica.Items.Remove("SEXO POR CARRERA");
                 ddlTipoGrafica.Items.Remove("EDAD POR CARRERA");
                 ddlTipoGrafica.Items.Remove("ALUMNOS POR SEMESTRE");
-                //ddlTipoGrafica.Items.Remove("MAYOR PROMEDIO POR CARRERA");
-
                 ddlTipoGrafica.Items.Remove("EFICIENCIA DE EGRESO");
                 ddlTipoGrafica.Items.Remove("INDICE DE REPROBACION");
-
                 ddlTipoGrafica.Items.Add("SEXO POR CARRERA");
                 ddlTipoGrafica.Items.Add("EDAD POR CARRERA");
                 ddlTipoGrafica.DataBind();
@@ -54,17 +50,13 @@ namespace SEDCE
             {
                 if (ddlCategoria.SelectedIndex == 1)
                 {
-                    //ddlTipoGrafica.Items.Add("ALUMNOS CON DISCAPACIDAD");
+                    ddlTipoGrafica.Items.Remove("SEXO POR CARRERA");
+                    ddlTipoGrafica.Items.Remove("EDAD POR CARRERA");
+                    ddlTipoGrafica.Items.Remove("EFICIENCIA DE EGRESO");
+                    ddlTipoGrafica.Items.Remove("INDICE DE REPROBACION");
                     ddlTipoGrafica.Items.Add("SEXO POR CARRERA");
                     ddlTipoGrafica.Items.Add("EDAD POR CARRERA");
                     ddlTipoGrafica.Items.Add("ALUMNOS POR SEMESTRE");
-                    //ddlTipoGrafica.Items.Add("MAYOR PROMEDIO POR CARRERA");
-
-                    ddlTipoGrafica.Items.Remove("EFICIENCIA DE EGRESO");
-                    ddlTipoGrafica.Items.Remove("INDICE DE REPROBACION");
-
-                    ddlTipoGrafica.Items.Remove("SEXO POR CARRERA");
-                    ddlTipoGrafica.Items.Remove("EDAD POR CARRERA");
                     ddlTipoGrafica.DataBind();
 
                     lblPeriodo.Visible = false;
@@ -72,21 +64,77 @@ namespace SEDCE
                 }
                 else
                 {
-                    //ddlTipoGrafica.Items.Remove("ALUMNOS CON DISCAPACIDAD");
+                    ddlTipoGrafica.Items.Remove("SEXO POR CARRERA");
+                    ddlTipoGrafica.Items.Remove("EDAD POR CARRERA");
                     ddlTipoGrafica.Items.Remove("SEXO POR CARRERA");
                     ddlTipoGrafica.Items.Remove("EDAD POR CARRERA");
                     ddlTipoGrafica.Items.Remove("ALUMNOS POR SEMESTRE");
-                    //ddlTipoGrafica.Items.Remove("MAYOR PROMEDIO POR CARRERA");
-
                     ddlTipoGrafica.Items.Add("EFICIENCIA DE EGRESO");
                     ddlTipoGrafica.Items.Add("INDICE DE REPROBACION");
-
-                    ddlTipoGrafica.Items.Remove("SEXO POR CARRERA");
-                    ddlTipoGrafica.Items.Remove("EDAD POR CARRERA");
                     ddlTipoGrafica.DataBind();
 
                     lblPeriodo.Visible = true;
                     ddlPeriodo.Visible = true;
+
+                    ddlPeriodo.Items.Remove("20102");
+                    ddlPeriodo.Items.Remove("20111");
+                    ddlPeriodo.Items.Remove("20112");
+                    ddlPeriodo.Items.Remove("20121");
+                    ddlPeriodo.Items.Remove("20122");
+                    ddlPeriodo.Items.Remove("20131");
+                    ddlPeriodo.Items.Remove("20132");
+                    ddlPeriodo.Items.Remove("20141");
+                    ddlPeriodo.Items.Remove("20142");
+
+                    ddlPeriodo.Items.Add("20102");
+                    ddlPeriodo.Items.Add("20111");
+                    ddlPeriodo.Items.Add("20112");
+                    ddlPeriodo.Items.Add("20121");
+                    ddlPeriodo.Items.Add("20122");
+                    ddlPeriodo.Items.Add("20131");
+                    ddlPeriodo.Items.Add("20132");
+                    ddlPeriodo.Items.Add("20141");
+                    ddlPeriodo.Items.Add("20142");
+                    ddlPeriodo.Items.Remove("20171");
+                    ddlPeriodo.DataBind();
+                }
+            }
+        }
+
+        protected void ddlTipoGrafica_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlCategoria.SelectedIndex == 2)
+            {
+                if (ddlTipoGrafica.SelectedIndex == 0)
+                {
+                    ddlPeriodo.Items.Add("20102");
+                    ddlPeriodo.Items.Add("20111");
+                    ddlPeriodo.Items.Add("20112");
+                    ddlPeriodo.Items.Add("20121");
+                    ddlPeriodo.Items.Add("20122");
+                    ddlPeriodo.Items.Add("20131");
+                    ddlPeriodo.Items.Add("20132");
+                    ddlPeriodo.Items.Add("20141");
+                    ddlPeriodo.Items.Add("20142");
+                    ddlPeriodo.Items.Remove("20171");
+                    ddlPeriodo.DataBind();
+                }
+                else
+                {
+                    if (ddlTipoGrafica.SelectedIndex == 1)
+                    {
+                        ddlPeriodo.Items.Remove("20102");
+                        ddlPeriodo.Items.Remove("20111");
+                        ddlPeriodo.Items.Remove("20112");
+                        ddlPeriodo.Items.Remove("20121");
+                        ddlPeriodo.Items.Remove("20122");
+                        ddlPeriodo.Items.Remove("20131");
+                        ddlPeriodo.Items.Remove("20132");
+                        ddlPeriodo.Items.Remove("20141");
+                        ddlPeriodo.Items.Remove("20142");
+                        ddlPeriodo.Items.Add("20171");
+                        ddlPeriodo.DataBind();
+                    }
                 }
             }
         }

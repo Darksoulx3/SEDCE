@@ -168,7 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site1.Master" />
-    <Content Include="DataBaseBackup\SEDSE5-12-2017.BAK" />
     <Content Include="SEDCEdataset.xsc">
       <DependentUpon>SEDCEdataset.xsd</DependentUpon>
     </Content>
@@ -197,6 +196,7 @@
     <EmbeddedResource Include="Reportes\EGRESADOS20111.rdlc" />
     <EmbeddedResource Include="Reportes\EGRESADOS20112.rdlc" />
     <EmbeddedResource Include="Reportes\EGRESADOS20121.rdlc" />
+    <EmbeddedResource Include="Reportes\INDICEDEREPROBACION20171.rdlc" />
     <EmbeddedResource Include="Reportes\MatriculaTotalDiscapacidad.rdlc" />
     <EmbeddedResource Include="Reportes\MatriculaTotalPorEdad.rdlc" />
     <EmbeddedResource Include="Reportes\MatriculaTotalPorSexo.rdlc" />
@@ -207,6 +207,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ArchivosTemporales\" />
+    <Folder Include="DataBaseBackup\" />
     <Folder Include="ImportarDocumento\" />
   </ItemGroup>
   <ItemGroup>
@@ -225,7 +226,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>25333</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:53766/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

@@ -339,6 +339,17 @@ namespace SEDCE
                             }
                         }
                     }
+                    else
+                    {
+                        if (ddlPeriodo.SelectedIndex == 0)
+                        {
+                            report.ReportPath = "Reportes/INDICEDEREPROBACION20171.rdlc";
+                            SEDCEdatasetTableAdapters.INDICE_DE_REPROBACION_20171TableAdapter MC = new SEDCEdatasetTableAdapters.INDICE_DE_REPROBACION_20171TableAdapter();
+                            MC.Fill(Consulta.IndiceReprobacion20171());
+                            RDS.Name = "DataSet1";//This refers to the dataset name in the RDLC file
+                            RDS.Value = Consulta.IndiceReprobacion20171();
+                        }
+                    }
                 }
             }
             report.DataSources.Add(RDS);
@@ -371,6 +382,7 @@ namespace SEDCE
                 ddlReporte.Items.Remove("ALUMNOS POR SEMESTRE");
                 ddlReporte.Items.Remove("MAYOR PROMEDIO POR CARRERA");
                 ddlReporte.Items.Remove("EFICIENCIA DE EGRESO");
+                ddlReporte.Items.Remove("INDICE DE REPROBACION");
                 ddlReporte.Items.Add("SEXO POR CARRERA");
                 ddlReporte.Items.Add("EDAD POR CARRERA");
                 //ddlReporte.Items.Add("PROCEDENCIA POR CARRERA");
@@ -387,6 +399,7 @@ namespace SEDCE
                     ddlReporte.Items.Remove("SEXO POR CARRERA");
                     ddlReporte.Items.Remove("EDAD POR CARRERA");
                     ddlReporte.Items.Remove("EFICIENCIA DE EGRESO");
+                    ddlReporte.Items.Remove("INDICE DE REPROBACION");
                     //ddlReporte.Items.Remove("PROCEDENCIA POR CARRERA");
                     ddlReporte.Items.Add("ALUMNOS CON DISCAPACIDAD");
                     ddlReporte.Items.Add("SEXO POR CARRERA");
@@ -410,11 +423,68 @@ namespace SEDCE
                     ddlReporte.Items.Remove("ALUMNOS POR SEMESTRE");
                     ddlReporte.Items.Remove("MAYOR PROMEDIO POR CARRERA");
                     ddlReporte.Items.Add("EFICIENCIA DE EGRESO");
+                    ddlReporte.Items.Add("INDICE DE REPROBACION");
                     ddlReporte.DataBind();
                     ddlCarrera.Visible = false;
                     lblCarrera.Visible = false;
                     ddlPeriodo.Visible = true;
                     lblPeriodo.Visible = true;
+
+                    ddlPeriodo.Items.Remove("20102");
+                    ddlPeriodo.Items.Remove("20111");
+                    ddlPeriodo.Items.Remove("20112");
+                    ddlPeriodo.Items.Remove("20121");
+                    ddlPeriodo.Items.Remove("20122");
+                    ddlPeriodo.Items.Remove("20131");
+                    ddlPeriodo.Items.Remove("20132");
+                    ddlPeriodo.Items.Remove("20141");
+                    ddlPeriodo.Items.Remove("20142");
+                    ddlPeriodo.Items.Add("20102");
+                    ddlPeriodo.Items.Add("20111");
+                    ddlPeriodo.Items.Add("20112");
+                    ddlPeriodo.Items.Add("20121");
+                    ddlPeriodo.Items.Add("20122");
+                    ddlPeriodo.Items.Add("20131");
+                    ddlPeriodo.Items.Add("20132");
+                    ddlPeriodo.Items.Add("20141");
+                    ddlPeriodo.Items.Add("20142");
+                    ddlPeriodo.Items.Remove("20171");
+                    ddlPeriodo.DataBind();
+                }
+            }
+        }
+
+        protected void ddlReporte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlCategoria.SelectedIndex == 2)
+            {
+                if (ddlReporte.SelectedIndex == 0)
+                {
+                    ddlPeriodo.Items.Add("20102");
+                    ddlPeriodo.Items.Add("20111");
+                    ddlPeriodo.Items.Add("20112");
+                    ddlPeriodo.Items.Add("20121");
+                    ddlPeriodo.Items.Add("20122");
+                    ddlPeriodo.Items.Add("20131");
+                    ddlPeriodo.Items.Add("20132");
+                    ddlPeriodo.Items.Add("20141");
+                    ddlPeriodo.Items.Add("20142");
+                    ddlPeriodo.Items.Remove("20171");
+                    ddlPeriodo.DataBind();
+                }
+                else
+                {
+                    ddlPeriodo.Items.Remove("20102");
+                    ddlPeriodo.Items.Remove("20111");
+                    ddlPeriodo.Items.Remove("20112");
+                    ddlPeriodo.Items.Remove("20121");
+                    ddlPeriodo.Items.Remove("20122");
+                    ddlPeriodo.Items.Remove("20131");
+                    ddlPeriodo.Items.Remove("20132");
+                    ddlPeriodo.Items.Remove("20141");
+                    ddlPeriodo.Items.Remove("20142");
+                    ddlPeriodo.Items.Add("20171");
+                    ddlPeriodo.DataBind();
                 }
             }
         }

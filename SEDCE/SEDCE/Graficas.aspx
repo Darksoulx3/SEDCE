@@ -15,7 +15,7 @@
             </div>
             <div style="margin-right:49px; margin-top:30px">
                 <asp:Label ID="lblTipodeGrafica" runat="server" Text="Tipo de Grafica: " ></asp:Label>
-                <asp:DropDownList ID="ddlTipoGrafica" runat="server" Width="200px">
+                <asp:DropDownList ID="ddlTipoGrafica" runat="server" Width="200px" AutoPostBack="True" OnSelectedIndexChanged="ddlTipoGrafica_SelectedIndexChanged">
                     <asp:ListItem>SEXO POR CARRERA</asp:ListItem>
                     <asp:ListItem>EDAD POR CARRERA</asp:ListItem>
                 </asp:DropDownList>
@@ -51,7 +51,15 @@
             <div style="margin-left:2px;margin-top:30px">
                 <asp:Label ID="lblPeriodo" runat="server" Text="Periodo: " Visible="False" ></asp:Label>
                 <asp:DropDownList ID="ddlPeriodo" runat="server" Width="200px" Visible="False">
-                    <asp:ListItem>17-1</asp:ListItem>
+                    <asp:ListItem>20102</asp:ListItem>
+                    <asp:ListItem>20111</asp:ListItem>
+                    <asp:ListItem>20112</asp:ListItem>
+                    <asp:ListItem>20121</asp:ListItem>
+                    <asp:ListItem>20122</asp:ListItem>
+                    <asp:ListItem>20131</asp:ListItem>
+                    <asp:ListItem>20132</asp:ListItem>
+                    <asp:ListItem>20141</asp:ListItem>
+                    <asp:ListItem>20142</asp:ListItem>
                 </asp:DropDownList>
             </div>
             <div style="margin-top:30px">

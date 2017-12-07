@@ -296,6 +296,18 @@ namespace SEDCE
             con.Close();
             return dt;
         }
+
+        public SEDCEdataset.INDICE_DE_REPROBACION_20171DataTable IndiceReprobacion20171()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("INDICE_DE_REPROBACION_20171", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
+            SEDCEdataset.INDICE_DE_REPROBACION_20171DataTable dt = new SEDCEdataset.INDICE_DE_REPROBACION_20171DataTable();
+            dt.Load(cmd.ExecuteReader());
+            con.Close();
+            return dt;
+        }
         #endregion
 
         public bool ExisteUsuario(string usuario) 
@@ -385,11 +397,10 @@ namespace SEDCE
             return Convert.ToDouble(resultado);
         }
 
-        public void BackUpBD()
+        public void BackUpBD(string backup)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand(@"BACKUP DATABASE SEDSE TO DISK = 'C:\Users\Jonathan Rodriguez\Documents\Backups\SEDSE" +
-                             DateTime.Today.Day + "-" + DateTime.Today.Month + "-" + DateTime.Today.Year + ".BAK'", con);
+            SqlCommand cmd = new SqlCommand(@"BACKUP DATABASE SEDSE TO DISK = '"+backup+"'", con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
@@ -599,11 +610,13 @@ namespace SEDCE
             con.Close();
         }
 
-        public void RestoreDB()
+        public void RestoreDB(string backup)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["SEDCEConString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand(@"USE MASTER RESTORE DATABASE SEDSE FROM DISK = 'C:\Users\Jonathan Rodriguez\Documents\Backups\SEDSE" +
-                             DateTime.Today.Day + "-" + DateTime.Today.Month + "-" + DateTime.Today.Year + ".BAK'", con);
+            SqlCommand cmd = new SqlCommand(@"USE MASTER "+
+                                             "ALTER DATABASE SEDSE SET Single_User WITH Rollback Immediate "+
+                                             "RESTORE DATABASE SEDSE FROM DISK = '" + backup + "' WITH REPLACE "+
+                                             "ALTER DATABASE SEDSE SET Multi_User", con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();

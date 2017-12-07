@@ -22,18 +22,14 @@ namespace SEDCE
             }
         }
 
-        protected void btnSubirArchivo_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void InsertExcelRecords(string FilePath)
         {
 
             ConeccionesBD Consultas = new ConeccionesBD();
             try
             {
-                Consultas.BackUpBD();
+                string backup = Server.MapPath("~/DataBaseBackUp/SEDSE.BAK");
+                Consultas.BackUpBD(backup);
                 Consultas.PrepararTablas();
                 Consultas.ActualizarAlumnos(FilePath);
                 Consultas.CrearNuevoIngreso();
@@ -44,7 +40,8 @@ namespace SEDCE
             }
             catch (Exception)
             {
-                Consultas.RestoreDB();
+                string backup = Server.MapPath("~/DataBaseBackUp/SEDSE.BAK");
+                Consultas.RestoreDB(backup);
                 lblResultado.Text = "Error al actualizar base de datos revise el archivo porfavor";
             }
         }
@@ -54,6 +51,7 @@ namespace SEDCE
             string NombreArchivo = Path.Combine(Server.MapPath("~/ImportarDocumento"), Guid.NewGuid().ToString() + Path.GetExtension(fuBD.PostedFile.FileName));
             fuBD.PostedFile.SaveAs(NombreArchivo);
             InsertExcelRecords(NombreArchivo);
+            File.Delete(NombreArchivo);
         }
     }
 }
