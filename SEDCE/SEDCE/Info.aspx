@@ -40,12 +40,26 @@
             <div style="margin-top:30px">
                 <asp:Button ID="btnSubir" runat="server" Text="Subir datos" OnClick="btnSubir_Click" OnClientClick="return confirm('Seguro que desea subir este archivo?')"/>
             </div>
-            <div style="margin-top:120px">
+            <div style="margin-top:60px">
                 <asp:Button ID="btnDescargar" runat="server" Text="Descargar Backup de la BD" OnClick="btnDescargar_Click" OnClientClick="return confirm('Seguro que desea descargar el backup?')"/>
+            </div>
+            <div style="margin-top:60px">
+                <div>
+                    <asp:Label ID="lblRestore" runat="server" Text="Para hacer un restore manual de la BD seleccione un archivo:"></asp:Label>
+                </div>
+                <div>
+                    <asp:FileUpload ID="fuRestore" runat="server"/>
+                </div>
+                <div>
+                    <asp:Label ID="lblRestoreError" runat="server" Text="" ForeColor="Red"></asp:Label>
+                </div>
+                <div>
+                    <asp:Button ID="btnRestore" runat="server" Text="Restore Manual"  OnClientClick="return confirm('Seguro que desea restaurar la BD?')" OnClick="btnRestore_Click"/>
+                </div>
             </div>
             
             <%--<div style="margin-top:70px">
-                <asp:Label ID="Label1" runat="server" Text="Seleccione un arcivo para cargar la lista de seguro social: "></asp:Label>
+                <asp:Label ID="Label1" runat="server" Text="Seleccione un archivo para cargar la lista de seguro social: "></asp:Label>
             </div>
             <div>
                 <asp:Button ID="Button1" runat="server" Text="..." />

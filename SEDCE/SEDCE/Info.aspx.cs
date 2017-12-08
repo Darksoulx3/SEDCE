@@ -81,5 +81,22 @@ namespace SEDCE
                 File.Delete(Server.MapPath("~/ArchivosTemporales/SEDSE.BAK"));
             }
         }
+
+        protected void btnRestore_Click(object sender, EventArgs e)
+        {
+            if (fuRestore.HasFile)
+            {
+                string NombreArchivo = Server.MapPath("~/ArchivosTemporales/SEDSE.BAK");
+                fuRestore.PostedFile.SaveAs(NombreArchivo);
+                ConeccionesBD consultas = new ConeccionesBD();
+                consultas.RestoreDB(NombreArchivo);
+                lblRestoreError.Text = "Restore completado exitosamente";
+                File.Delete(NombreArchivo);
+            }
+            else
+            {
+                lblRestoreError.Text = "Favor de seleccionar un archivo";
+            }
+        }
     }
 }

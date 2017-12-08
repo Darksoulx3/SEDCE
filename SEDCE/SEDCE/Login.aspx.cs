@@ -33,10 +33,17 @@ namespace SEDCE
             sqldr = cmd.ExecuteReader();
             if (sqldr.Read())
             {
-                Session["usuario"] = sqldr["nombre_usuario"];
-                Session["nivel"] = sqldr["nivel_usuario"];
-                con.Close();
-                Response.Redirect("Inicio.aspx");
+                if (txtxBPassword.Text.Equals(sqldr["contraseña_usuario"]))
+                {
+                    Session["usuario"] = sqldr["nombre_usuario"];
+                    Session["nivel"] = sqldr["nivel_usuario"];
+                    con.Close();
+                    Response.Redirect("Inicio.aspx");
+                }
+                else 
+                {
+                    lblError.Text = "Usuario o contraseña incorrectos";
+                }
             }
             else 
             {
