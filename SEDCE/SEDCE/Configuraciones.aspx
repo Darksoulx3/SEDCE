@@ -64,7 +64,7 @@
         </div>
 
         <div >
-            <asp:Button ID="btnAceptarCambioUsuario" Text="Crear Usuario" runat="server" OnClick="btnAceptarCambioUsuario_Click" />
+            <asp:Button ID="btnAceptarCambioUsuario" Text="Crear Usuario" runat="server" OnClick="btnAceptarCambioUsuario_Click" OnClientClick ="return confirm('Seguro que desea agregar este usuario?')"/>
             <asp:Button ID="Button1" Text="Eliminar Usuario" runat="server" Visible="false" OnClick="Button1_Click" OnClientClick="return confirm('Seguro que desea eliminar al usuario seleccionado?')"/>
             <asp:Button ID="Button2" Text="Modificar Usuario" runat="server" Visible="false" OnClick="Button2_Click" OnClientClick="return confirm('Seguro que desea modificar el usuario seleccionado?')"/>
         </div>     

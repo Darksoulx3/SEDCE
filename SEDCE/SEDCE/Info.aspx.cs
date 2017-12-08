@@ -29,6 +29,10 @@ namespace SEDCE
             try
             {
                 string backup = Server.MapPath("~/DataBaseBackUp/SEDSE.BAK");
+                if (File.Exists(backup)) 
+                {
+                    File.Delete(backup);
+                }
                 Consultas.BackUpBD(backup);
                 Consultas.PrepararTablas();
                 Consultas.ActualizarAlumnos(FilePath);
@@ -48,10 +52,17 @@ namespace SEDCE
 
         protected void btnSubir_Click(object sender, EventArgs e)
         {
-            string NombreArchivo = Path.Combine(Server.MapPath("~/ImportarDocumento"), Guid.NewGuid().ToString() + Path.GetExtension(fuBD.PostedFile.FileName));
-            fuBD.PostedFile.SaveAs(NombreArchivo);
-            InsertExcelRecords(NombreArchivo);
-            File.Delete(NombreArchivo);
+            if (fuBD.HasFile)
+            {
+                string NombreArchivo = Server.MapPath("~/ImportarDocumento/import.xls");
+                fuBD.PostedFile.SaveAs(NombreArchivo);
+                InsertExcelRecords(NombreArchivo);
+                File.Delete(NombreArchivo);
+            }
+            else
+            {
+                lblResultado.Text = "Favor de seleccionar un archivo";
+            }
         }
 
         protected void btnDescargar_Click(object sender, EventArgs e)

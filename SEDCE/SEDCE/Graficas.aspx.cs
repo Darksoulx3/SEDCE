@@ -75,6 +75,8 @@ namespace SEDCE
 
                     lblPeriodo.Visible = true;
                     ddlPeriodo.Visible = true;
+                    ddlCarrera.Visible = false;
+                    lblCarrera.Visible = false;
 
                     ddlPeriodo.Items.Remove("20102");
                     ddlPeriodo.Items.Remove("20111");
@@ -118,6 +120,9 @@ namespace SEDCE
                     ddlPeriodo.Items.Add("20142");
                     ddlPeriodo.Items.Remove("20171");
                     ddlPeriodo.DataBind();
+                    lblCarrera.Visible = false;
+                    ddlCarrera.Visible = false;
+                    ddlCarrera.SelectedIndex = 0;
                 }
                 else
                 {
@@ -134,6 +139,8 @@ namespace SEDCE
                         ddlPeriodo.Items.Remove("20142");
                         ddlPeriodo.Items.Add("20171");
                         ddlPeriodo.DataBind();
+                        lblCarrera.Visible = true;
+                        ddlCarrera.Visible = true;
                     }
                 }
             }

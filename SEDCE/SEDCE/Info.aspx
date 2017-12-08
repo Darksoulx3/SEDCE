@@ -32,16 +32,18 @@
             </div>--%>
             <div>
                 <asp:FileUpload ID="fuBD" runat="server"/>
+                <%--<asp:RegularExpressionValidator ID="REV" runat="server" ErrorMessage ="Tipo de archivo no permitido" ControlToValidate="fuBD" ValidationExpression="(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.xls)$"></asp:RegularExpressionValidator>--%>
             </div>
             <div>
                 <asp:Label ID="lblResultado" runat="server" Text="" ForeColor="Red"></asp:Label>
             </div>
             <div style="margin-top:30px">
-                <asp:Button ID="btnSubir" runat="server" Text="Subir datos" OnClick="btnSubir_Click" />
+                <asp:Button ID="btnSubir" runat="server" Text="Subir datos" OnClick="btnSubir_Click" OnClientClick="return confirm('Seguro que desea subir este archivo?')"/>
             </div>
             <div style="margin-top:120px">
-                <asp:Button ID="btnDescargar" runat="server" Text="Descargar Backup de la BD" OnClick="btnDescargar_Click"/>
+                <asp:Button ID="btnDescargar" runat="server" Text="Descargar Backup de la BD" OnClick="btnDescargar_Click" OnClientClick="return confirm('Seguro que desea descargar el backup?')"/>
             </div>
+            
             <%--<div style="margin-top:70px">
                 <asp:Label ID="Label1" runat="server" Text="Seleccione un arcivo para cargar la lista de seguro social: "></asp:Label>
             </div>

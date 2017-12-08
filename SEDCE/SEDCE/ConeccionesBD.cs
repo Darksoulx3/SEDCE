@@ -436,7 +436,7 @@ namespace SEDCE
         {
             string constr = string.Format(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + FilePath + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=1;';");
             OleDbConnection Econ = new OleDbConnection(constr);
-            string Query = string.Format("Select * FROM [{0}]", "7_enviar$");
+            string Query = string.Format("Select * FROM [{0}]", "ALUMNOS$");
             OleDbCommand Ecom = new OleDbCommand(Query, Econ);
             Econ.Open();
 
@@ -498,7 +498,7 @@ namespace SEDCE
         {
             string constr = string.Format(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + FilePath + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=1;';");
             OleDbConnection Econ = new OleDbConnection(constr);
-            string Query = string.Format("Select * FROM [{0}]", "NUEVO_INGRESO_20113_DETALLE$");
+            string Query = string.Format("Select * FROM [{0}]", "NUEVO_INGRESO$");
             OleDbCommand Ecom = new OleDbCommand(Query, Econ);
             Econ.Open();
 
@@ -529,7 +529,7 @@ namespace SEDCE
         {
             string constr = string.Format(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + FilePath + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=1;';");
             OleDbConnection Econ = new OleDbConnection(constr);
-            string Query = string.Format("Select * FROM [{0}]", "APRO_Y_REPRO_POR_CARRERA_3$");
+            string Query = string.Format("Select * FROM [{0}]", "APRO_Y_REPRO_POR_CARRERA$");
             OleDbCommand Ecom = new OleDbCommand(Query, Econ);
             Econ.Open();
 
@@ -572,7 +572,7 @@ namespace SEDCE
         {
             string constr = string.Format(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + FilePath + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=1;';");
             OleDbConnection Econ = new OleDbConnection(constr);
-            string Query = string.Format("Select * FROM [{0}]", "total_3$");
+            string Query = string.Format("Select * FROM [{0}]", "EGRESADOS$");
             OleDbCommand Ecom = new OleDbCommand(Query, Econ);
             Econ.Open();
 
