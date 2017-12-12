@@ -69,6 +69,10 @@ namespace SEDCE
         {
             string NombreArchivo = Server.MapPath("~/ArchivosTemporales/SEDSE.BAK");
             ConeccionesBD Consultas = new ConeccionesBD();
+            if (File.Exists(NombreArchivo))
+            {
+                File.Delete(NombreArchivo);
+            }
             Consultas.BackUpBD(NombreArchivo);
             try
             {
@@ -86,12 +90,23 @@ namespace SEDCE
         {
             if (fuRestore.HasFile)
             {
-                string NombreArchivo = Server.MapPath("~/ArchivosTemporales/SEDSE.BAK");
-                fuRestore.PostedFile.SaveAs(NombreArchivo);
-                ConeccionesBD consultas = new ConeccionesBD();
-                consultas.RestoreDB(NombreArchivo);
-                lblRestoreError.Text = "Restore completado exitosamente";
-                File.Delete(NombreArchivo);
+                try
+                {
+                    string NombreArchivo = Server.MapPath("~/ArchivosTemporales/SEDSE.BAK");
+                    if (File.Exists(NombreArchivo))
+                    {
+                        File.Delete(NombreArchivo);
+                    }
+                    fuRestore.PostedFile.SaveAs(NombreArchivo);
+                    ConeccionesBD consultas = new ConeccionesBD();
+                    consultas.RestoreDB(NombreArchivo);
+                    lblRestoreError.Text = "Restore completado exitosamente";
+                    File.Delete(NombreArchivo);
+                }
+                catch(Exception hahaValidado)
+                {
+                    lblRestoreError.Text = "Error formato o tipo de archivo equivocado";
+                }
             }
             else
             {
